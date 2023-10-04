@@ -1,3 +1,5 @@
+import "../assets/scss/style.scss";
+
 export const metadata = {
     title: "김준호의 포트폴리오",
     description: "Next.js를 사용한 개인 포트폴리오 사이트입니다.",
