@@ -4,13 +4,13 @@ import React, { useEffect } from "react";
 import Skip from "../components/Skip";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
+import About from "../components/About";
 import Skill from "../components/Skill";
-import Site from "../components/Site";
-import Port from "../components/Port";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import lenis from "../utils/lenis";
 import link from "../utils/link";
+import Site from "../components/Site";
 
 const Home = () => {
     useEffect(() => {
@@ -19,18 +19,18 @@ const Home = () => {
     }, []);
 
     return (
-        <>
+        <div id="wrap">
             <Skip />
             <Header />
             <main id="main" role="main">
                 <Intro />
+                <About />
                 <Skill />
-                <Site/>
-                <Port />
+                <Site />
                 <Contact />
             </main>
             <Footer />
-        </>
+        </div>
     );
 };
 export default Home;
