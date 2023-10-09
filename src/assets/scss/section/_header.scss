@@ -61,7 +61,7 @@
                         }
                     }
                 }
-                @media all and (max-width: 800px) {
+                @include tablet {
                     display: none;
 
                     & + .mobile_menu_btn {

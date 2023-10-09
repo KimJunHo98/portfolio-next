@@ -25,7 +25,7 @@ const Home = () => {
         const loadingTimer = setTimeout(() => {
             setIsLoading(false);
         }, 4000);
-        
+
         const showTimer = setTimeout(() => {
             setIsShow(true);
         }, 4100);
@@ -52,7 +52,7 @@ const Home = () => {
                         <Skip />
                         <Header />
                         <main id="main" role="main">
-                            <Intro />
+                            <Intro isShow={isShow} />
                             <About />
                             <Skill />
                             <Site />

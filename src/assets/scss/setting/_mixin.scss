@@ -26,3 +26,40 @@
     left: 0;
     top: 0;
 }
+
+// 미디어쿼리
+$desktop: 1440px;
+$laptop: 1020px;
+$tablet: 768px;
+$L_mobile: 480px;
+$S_mobile: 320px;
+
+@mixin desktop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin L_mobile {
+    @media (max-width: $L_mobile) {
+        @content;
+    }
+}
+@mixin S_mobile {
+    @media (max-width: $S_mobile) {
+        @content;
+    }
+}
+
+
+
+

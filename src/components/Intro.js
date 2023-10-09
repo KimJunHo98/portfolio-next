@@ -3,14 +3,14 @@ import { introText } from "../constants/index";
 // import imgSrc from "../assets/images/main-profile.png";
 // import Image from "next/image";
 
-const Intro = () => {
+const Intro = ({isShow}) => {
     return (
         <section id="intro">
             <div className="container">
                 <div className="inner">
                     <h2 className="ir_so">인트로</h2>
                     <div className="intro">
-                        <h2 className="intro_title">{introText.title}</h2>
+                        <h2 className={`intro_title ${isShow? "on" : ""}`}>{introText.title}</h2>
                         <div className="intro_lines" aria-hidden="true">
                             <span className="line line1"></span>
                             <span className="line line2"></span>
