@@ -21,7 +21,7 @@
             position: relative;
             top: 0px;
             right: -120%;
-            animation: slideText 1s cubic-bezier(1, 0, 0, 0.94) 1s forwards;
+            animation: slideText 1s cubic-bezier(1, 0, 0, 0.94) .7s forwards;
 
             &.on {
                 @keyframes slideText {

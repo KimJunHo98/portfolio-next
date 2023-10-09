@@ -2,6 +2,14 @@
     width: 100%;
     @include position-fixed;
     z-index: 10000;
+
+    .header_progress_bar {
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        background-color: #d5d0cd;
+    }
     
     .header_inner {
         background: rgba(116, 99, 99, 0.1);
