@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+// setting
+@import "setting/reset";
+@import "setting/fonts";
+@import "setting/mixin";
+@import "setting/vars";
+
+// section
+@import "section/loading";
+@import "section/skip";
+@import "section/header";
+@import "section/intro";
+@import "section/skill";
+@import "section/site";
+@import "section/footer";
+
 // slide_up
 #slide_up {
     width: 100%;
@@ -16,18 +31,3 @@
         transform: translateY(-100%);
     }
 }
-
-// setting
-@import "setting/reset";
-@import "setting/fonts";
-@import "setting/mixin";
-@import "setting/vars";
-
-// section
-@import "section/loading";
-@import "section/skip";
-@import "section/header";
-@import "section/intro";
-@import "section/skill";
-@import "section/site";
-@import "section/footer";

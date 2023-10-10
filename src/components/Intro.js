@@ -1,28 +1,27 @@
 import React from "react";
-import { introText } from "../constants/index";
+import { introText, lines } from "../constants/index";
 // import imgSrc from "../assets/images/main-profile.png";
 // import Image from "next/image";
 
-const Intro = ({isShow}) => {
+const Intro = ({ isShow }) => {
     return (
         <section id="intro">
+            <h2 className="blind">인트로</h2>
             <div className="container">
                 <div className="inner">
-                    <h2 className="ir_so">인트로</h2>
                     <div className="intro">
-                        <h2 className={`intro_title ${isShow? "on" : ""}`}>{introText.title}</h2>
+                        <h2 className={`intro_title ${isShow ? "show" : ""}`}>{introText.title}</h2>
                         <div className="intro_lines" aria-hidden="true">
-                            <span className="line line1"></span>
-                            <span className="line line2"></span>
-                            <span className="line line3"></span>
-                            <span className="line line4"></span>
-                            <span className="line line5"></span>
-                            <span className="line line6"></span>
+                            {lines.map((line) => (
+                                <span key={line.id} className={`${line.class} ${isShow ? "show" : ""}`}></span>
+                            ))}
                         </div>
-                        <div className="intro_text">
+                        <div className={`intro_text ${isShow ? "show" : ""}`}>
                             <ul className="intro_desc">
                                 {introText.desc.map((intro, i) => (
-                                    <li key={i} className="desc_text">{intro}</li>
+                                    <li key={i} className="desc_text">
+                                        {intro}
+                                    </li>
                                 ))}
                             </ul>
                             {/* <div className="profile_img">

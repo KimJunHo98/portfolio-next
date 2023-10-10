@@ -1,0 +1,53 @@
+#skill {
+    width: 100%;
+
+    .skill {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .skill_title {
+            width: 48%;
+            height: 100%;
+            line-height: 1;
+            position: sticky;
+            top: 80px;
+            left: 0;
+            border-bottom: .5vw solid var(--black);
+            font-family: var(--mainKor-font);
+            font-size: 5vw;
+            font-weight: 800;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+            color: var(--black100);
+        }
+
+        .skill_items {
+            width: 50%;
+            
+            .skill_item_box {
+                width: 100%;
+                margin-bottom: 200px;
+                padding: 0 20px 20px 20px;
+
+                .skill_name {
+                    font-size: 2vw;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: var(--black100);
+
+                    .skill_num {
+                        padding-right: 10px;
+                        font-size: 3vw;
+                    }
+                }
+                .skill_desc {
+                    padding-top: 30px;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

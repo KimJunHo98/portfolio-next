@@ -14,8 +14,8 @@ const Header = () => {
     return (
         <>
             <header id="header" role="header">
+                <h2 className="blind">헤더</h2>
                 <div className="header_inner">
-                    <h2 className="ir_so">헤더</h2>
                     <div className="header">
                         <h1 className="header_logo" role="link">
                             <Link href="/">

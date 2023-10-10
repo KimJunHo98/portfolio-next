@@ -1,0 +1,40 @@
+#footer {
+    width: 100%;
+    border-top: 2px solid var(--black);
+
+    .footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .copy {
+            width: 80%;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .footer_link_wrap {
+            display: flex;
+
+            .footer_link {
+                display: flex;
+                margin-left: 30px;
+                text-decoration: underline;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+                
+                span {
+                    display: inline-block;
+                    padding-left: 5px;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
