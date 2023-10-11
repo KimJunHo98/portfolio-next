@@ -28,37 +28,32 @@
 }
 
 // 미디어쿼리
-$desktop: 1440px;
-$laptop: 1020px;
+$desktop: 1280px;
 $tablet: 768px;
-$L_mobile: 480px;
-$S_mobile: 320px;
+$mobile: 767px;
+$s_mobile: 480px;
 
 @mixin desktop {
-    @media (max-width: $desktop) {
-        @content;
-    }
-}
-@mixin laptop {
-    @media (max-width: $laptop) {
+    @media all and (max-width: $desktop) {
         @content;
     }
 }
 @mixin tablet {
-    @media (max-width: $tablet) {
+    @media all and (min-width: $tablet) and (max-width: 1023px) {
         @content;
     }
 }
-@mixin L_mobile {
-    @media (max-width: $L_mobile) {
+@mixin mobile {
+    @media all and (max-width: $mobile) {
         @content;
     }
 }
-@mixin S_mobile {
-    @media (max-width: $S_mobile) {
+@mixin s_mobile {
+    @media all and (max-width: $s_mobile) {
         @content;
     }
 }
+
 
 
 

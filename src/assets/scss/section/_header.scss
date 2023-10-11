@@ -21,6 +21,16 @@
             height: 70px;
             @include flex-between;
             position: relative;
+
+            @include tablet {
+                padding: 15px;
+            }
+            @include mobile {
+                padding: 15px;
+            }
+            @include s_mobile {
+                padding: 15px 12px;
+            }
     
             .header_logo {
                 height: 100%;
@@ -50,7 +60,7 @@
                         a {
                             position: relative;
                             padding: 14px;
-                            font-size: 1.4rem;
+                            font-size: 1.6rem;
 
                             &::before {
                                 content: "";
@@ -72,7 +82,14 @@
                 }
                 @include tablet {
                     display: none;
-
+    
+                    & + .mobile_menu_btn {
+                        display: block;
+                    }
+                }
+                @include mobile {
+                    display: none;
+    
                     & + .mobile_menu_btn {
                         display: block;
                     }

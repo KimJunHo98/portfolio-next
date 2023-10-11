@@ -1,5 +1,28 @@
 #skill {
     width: 100%;
+    padding: 50px 0;
+
+    @include desktop {
+        .container { 
+            width: 100%; 
+            max-width: 100%; 
+        }
+    };
+    @include tablet {
+        .inner {
+            padding: 0 15px;
+        }
+    }
+    @include mobile {
+        .inner {
+            padding: 0 15px;
+        }
+    }
+    @include s_mobile {
+        .inner {
+            padding: 0 12px;
+        }
+    }
 
     .skill {
         width: 100%;
@@ -8,6 +31,11 @@
         flex-direction: row;
         justify-content: space-between;
 
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .skill_title {
             width: 48%;
             height: 100%;
@@ -15,37 +43,103 @@
             position: sticky;
             top: 80px;
             left: 0;
-            border-bottom: .5vw solid var(--black);
+            border-bottom: 5px solid var(--black);
             font-family: var(--mainKor-font);
-            font-size: 5vw;
+            font-size: 4rem;
             font-weight: 800;
             letter-spacing: -3px;
             text-transform: uppercase;
             color: var(--black100);
+
+            @include desktop {
+                border-bottom: 4px solid var(--black);
+                font-size: 3.4rem;
+                letter-spacing: -2px;
+            }
+            @include tablet {
+                font-size: 3rem;
+            }
+            @include mobile {
+                width: 100%;
+                top: 70px;
+                padding-top: 30px;
+                background-color: var(--mainBg-color);
+                font-size: 2.6rem;
+                letter-spacing: -1px;
+            }
+            @include s_mobile {
+                font-size: 2.4rem;
+            }
         }
 
         .skill_items {
             width: 50%;
+
+            @include mobile {
+                width: 100%;
+            }
             
             .skill_item_box {
                 width: 100%;
                 margin-bottom: 200px;
-                padding: 0 20px 20px 20px;
+                padding: 0 20px 20px;
+
+                @include desktop {
+                    margin-bottom: 190px;
+                    padding: 0 15px 20px;
+                }
+                @include tablet {
+                    margin-bottom: 150px;
+                    padding: 0 15px 15px;
+                }
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: 0;
+                    padding: 50px 0 12%;
+                }
 
                 .skill_name {
-                    font-size: 2vw;
+                    font-size: 3rem;
                     font-weight: 600;
                     text-transform: uppercase;
                     color: var(--black100);
 
+                    @include desktop {
+                        font-size: 2.8rem;
+                    }
+                    @include tablet {
+                        font-size: 2.4rem;
+                    }
+                    @include mobile {
+                        font-size: 2rem;
+                    }
+
                     .skill_num {
                         padding-right: 10px;
-                        font-size: 3vw;
+
+                        @include mobile {
+                            padding-right: 5px;
+                        }
                     }
                 }
                 .skill_desc {
                     padding-top: 30px;
                     font-size: 2rem;
+
+                    @include desktop {
+                        padding-top: 25px;
+                        font-size: 1.8rem;
+                    }
+                    @include tablet {
+                        padding-top: 20px;
+                        font-size: 1.6rem;
+                    }
+                    @include mobile {
+                        padding-top: 18px;
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }
