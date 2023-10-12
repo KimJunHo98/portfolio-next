@@ -11,23 +11,7 @@
 @import "section/skip";
 @import "section/header";
 @import "section/intro";
+@import "section/about";
 @import "section/skill";
 @import "section/site";
 @import "section/footer";
-
-// slide_up
-#slide_up {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    transform: translateY(0);
-    transition: all .5s ease-in;
-    background-color: #000;
-
-    &.slide {
-        transform: translateY(-100%);
-    }
-}

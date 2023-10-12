@@ -4,7 +4,7 @@ import { headerNav } from "../constants/index";
 import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Header = () => {
+const Header = ({dark}) => {
     const [active, setActive] = useState(false);
 
     const hadlekNavMobileClick = () => {
@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="header" role="header">
+            <header id="header" className={dark ? "dark" : ""} role="header">
                 <h2 className="blind">헤더</h2>
                 <div className="header_inner">
                     <div className="header">

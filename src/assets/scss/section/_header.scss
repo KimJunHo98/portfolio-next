@@ -2,13 +2,14 @@
     width: 100%;
     @include position-fixed;
     z-index: 10000;
+    transition: all 1s ease-in-out;
 
     .header_progress_bar {
         height: 4px;
         position: absolute;
         left: 0;
         bottom: -4px;
-        background-color: #d5d0cd;
+        background-color: #d3ccc9;
     }
     
     .header_inner {
@@ -175,6 +176,12 @@
                     display: block;
                 }
             }
+        }
+    }
+    &.dark {
+        .header_inner {
+            background-color: rgb(243, 237, 232, .8);
+            
         }
     }
 }
