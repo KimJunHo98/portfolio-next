@@ -21,11 +21,6 @@ export const headerNav = [
     },
 ];
 
-export const introText = {
-    title: "i'am front-end developer",
-    desc: ["front-end", "front-end", "front-end"],
-};
-
 export const lines = [
     {
         id: 0,

@@ -1,11 +1,7 @@
-#margin {
-    width: 100%;
-    height: 1000px;
-}
-
 #skill {
     width: 100%;
-    padding: 70px 0;
+    padding: 100px 0;
+    transition: all .5s ease-in-out;
 
     @include desktop {
         .container { 
@@ -46,39 +42,42 @@
             height: 100%;
             line-height: 1;
             position: sticky;
-            top: 80px;
+            top: 70px;
             left: 0;
-            border-bottom: 5px solid var(--black);
+            padding-top: 30px;
+            border-bottom: 5px solid var(--white);
             font-family: var(--mainKor-font);
-            font-size: 4rem;
+            font-size: 10rem;
             font-weight: 800;
             letter-spacing: -3px;
             text-transform: uppercase;
-            color: var(--black100);
+            color: var(--white);
 
             @include desktop {
-                border-bottom: 4px solid var(--black);
-                font-size: 3.4rem;
+                border-bottom: 4px solid var(--white);
+                font-size: 9rem;
                 letter-spacing: -2px;
             }
             @include tablet {
-                font-size: 3rem;
+                font-size: 8rem;
             }
             @include mobile {
                 width: 100%;
-                top: 70px;
-                padding-top: 30px;
-                background-color: var(--mainBg-color);
-                font-size: 2.6rem;
+                top: 50%;
+                left: 50%;
+                padding-top: 0;
+                transform: translateY(-50%, -50%);
+                border-bottom: 0 none;
+                font-size: 10rem;
                 letter-spacing: -1px;
-            }
-            @include s_mobile {
-                font-size: 2.4rem;
+                text-align: center;
+                background-color: transparent;
             }
         }
 
         .skill_items {
-            width: 50%;
+            width: 40%;
+            padding: 450px 0;
 
             @include mobile {
                 width: 100%;
@@ -87,22 +86,27 @@
             .skill_item_box {
                 width: 100%;
                 margin-bottom: 200px;
-                padding: 0 20px 20px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, .3);
+                background-color: var(--white);
 
                 @include desktop {
                     margin-bottom: 190px;
-                    padding: 0 15px 20px;
+                    padding: 15px;
                 }
                 @include tablet {
                     margin-bottom: 150px;
-                    padding: 0 15px 15px;
                 }
                 @include mobile {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     margin-bottom: 0;
-                    padding: 50px 0 12%;
+                    margin: 50px 0 15%;
+                }
+                @include s_mobile {
+                    margin: 50px 0 20%;
                 }
 
                 .skill_name {
@@ -144,6 +148,34 @@
                     @include mobile {
                         padding-top: 18px;
                         font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.white {
+        background: rgba(255, 255, 255, .9);
+
+        .skill {
+            .skill_title {
+                border-bottom: 5px solid var(--black);
+                color: var(--black);
+
+                @include mobile {
+                    border-bottom: 0 none
+                }
+            }
+    
+            .skill_items {
+                position: relative;
+                z-index: 9;
+
+                .skill_item_box {
+                    background-color: var(--white);
+    
+                    .skill_name {
+                        color: var(--black100);
                     }
                 }
             }

@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { skillText } from "../constants/index";
+import { useDarkMode } from "../context/DarkModeContext";
 
-const Skill = ({ marginRef }) => {
+const Skill = () => {
+    const { white, setWhite } = useDarkMode();
+    const skillRef = useRef(null);
+
+    useEffect(() => {
+        const gap = 50;
+
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            const skillRefOffsetTop = skillRef.current.offsetTop - gap;
+            const isWhite = scrollTop >= skillRefOffsetTop;
+
+            setWhite((prevWhite) => {
+                if (prevWhite === isWhite) {
+                    return prevWhite;
+                }
+                return isWhite;
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [setWhite]);
+
     return (
         <>
-            <section id="margin" ref={marginRef}>
-                <h2 className="blind">여백공간</h2>
-            </section>
-            <section id="skill">
+            <section id="skill" ref={skillRef} className={white ? "white" : ""}>
                 <h2 className="blind">스킬</h2>
                 <div className="container">
                     <div className="inner">

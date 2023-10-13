@@ -1,19 +1,20 @@
+.header_progress_bar {
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    background-color: #d3ccc9;
+}
+
 #header {
     width: 100%;
     @include position-fixed;
     z-index: 10000;
     transition: all 1s ease-in-out;
-
-    .header_progress_bar {
-        height: 4px;
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        background-color: #d3ccc9;
-    }
     
     .header_inner {
-        background: rgba(116, 99, 99, 0.1);
+        background-color: rgba(0,0,0, .1);
         backdrop-filter: blur(15px);
 
         .header {
@@ -42,9 +43,10 @@
                 font-size: 1.8rem;
     
                 a {
+                    color: var(--white100);
+
                     span {
                         display: block;
-                        color: var(--black200);
                         font-size: 1.2rem;
                     }
                 }
@@ -62,6 +64,7 @@
                             position: relative;
                             padding: 14px;
                             font-size: 1.6rem;
+                            color: var(--white100);
 
                             &::before {
                                 content: "";
@@ -72,7 +75,7 @@
                                 bottom: 10px;
                                 transform: scaleX(0);
                                 transition: all 0.3s ease-in;
-                                background-color: var(--black);
+                                background-color: var(--white100);
                             }
             
                             &:hover::before {
@@ -100,6 +103,8 @@
                 width: 40px;
                 height: 40px;
                 display: none;
+                border-radius: 10px;
+                background-color: var(--white100);
                 cursor: pointer;
 
                 &.active .btn_bar::after, &.active .btn_bar::before {
@@ -107,11 +112,13 @@
                 }
 
                 .btn_bar {
-                    width: 40px;
+                    width: 30px;
                     height: 2px;
                     display: block;
                     position: relative;
+                    left: 50%;
                     margin-top: 19px;               
+                    transform: translateX(-50%);
                     background-color: var(--black);
 
                     &::after, &::before {
@@ -141,8 +148,7 @@
                 right: 0;
                 padding: 20px;
                 z-index: 9999;
-                background: rgba(229, 223, 219);
-
+                
                 .mobile_menu {
                     .menu_item {
                         padding: 10px 30px;
@@ -151,7 +157,9 @@
                             position: relative;
                             padding: 10px;
                             font-size: 1.6rem;
+                            font-weight: 600;
                             text-transform: uppercase;
+                            color: var(--white100);
 
                             &::before {
                                 content: "";
@@ -162,7 +170,7 @@
                                 bottom: 8px;
                                 transform: scaleX(0);
                                 transition: all 0.3s ease-in;
-                                background-color: var(--black);
+                                background-color: var(--white100);
                             }
             
                             &:hover::before {
@@ -178,10 +186,53 @@
             }
         }
     }
-    &.dark {
+
+    &.white {
         .header_inner {
-            background-color: rgb(243, 237, 232, .8);
-            
+            .header {
+                .header_logo {
+                    a {
+                        color: var(--black);
+                    }
+                }
+                .header_nav_pc {
+                    .pc_menu {
+                        .menu_item {
+                            a {
+                                color: var(--black);
+    
+                                &::before {
+                                    background-color: var(--black);
+                                }
+                            }
+                        }
+                    }
+                }
+                .mobile_menu_btn {
+                    background-color: var(--black);
+
+                    .btn_bar {
+                        background-color: var(--white);
+    
+                        &::after, &::before {
+                            background-color: var(--white);
+                        }            
+                    }
+                }
+                .header_nav_mobile {                    
+                    .mobile_menu {
+                        .menu_item {
+                            a {
+                                color: var(--black);
+    
+                                &::before {
+                                    background-color: var(--black);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
