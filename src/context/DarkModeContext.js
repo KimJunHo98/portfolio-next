@@ -1,12 +1,13 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useRef } from "react";
 
 const DarkModeContext = createContext();
 
 export const DarkModeProvider = ({ children }) => {
     const [white, setWhite] = useState(false);
+    const siteRef = useRef(null);
 
     return (
-        <DarkModeContext.Provider value={{ white, setWhite }}>
+        <DarkModeContext.Provider value={{ white, setWhite, siteRef }}>
             {children}
         </DarkModeContext.Provider>
     );

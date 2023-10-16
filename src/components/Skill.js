@@ -3,7 +3,7 @@ import { skillText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
 
 const Skill = () => {
-    const { white, setWhite } = useDarkMode();
+    const { white, setWhite, siteRef } = useDarkMode();
     const skillRef = useRef(null);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const Skill = () => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             const skillRefOffsetTop = skillRef.current.offsetTop - gap;
-            const isWhite = scrollTop >= skillRefOffsetTop;
+            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRef.current.offsetTop - gap;
 
             setWhite((prevWhite) => {
                 if (prevWhite === isWhite) {
@@ -27,7 +27,7 @@ const Skill = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [setWhite]);
+    }, [setWhite, siteRef]);
 
     return (
         <>

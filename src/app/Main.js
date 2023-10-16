@@ -5,10 +5,6 @@ import Skill from "../components/Skill";
 import Site from "../components/Site";
 import Contact from "../components/Contact";
 
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
-
 const Main = ({isShow }) => {
     
     return (

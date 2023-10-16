@@ -7,9 +7,7 @@ import Skip from "../components/Skip";
 import Header from "../components/Header";
 import Main from "../app/Main";
 import Footer from "../components/Footer";
-
-import link from "../utils/link";
-import lenis from "../utils/lenis";
+import smooth from "../utils/smooth";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -33,8 +31,7 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        lenis();
-        link();
+        smooth();
     }, []);
 
     return (
