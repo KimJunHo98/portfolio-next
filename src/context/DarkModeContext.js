@@ -5,12 +5,9 @@ const DarkModeContext = createContext();
 export const DarkModeProvider = ({ children }) => {
     const [white, setWhite] = useState(false);
     const siteRef = useRef(null);
+    const skillRef = useRef(null);
 
-    return (
-        <DarkModeContext.Provider value={{ white, setWhite, siteRef }}>
-            {children}
-        </DarkModeContext.Provider>
-    );
+    return <DarkModeContext.Provider value={{ white, setWhite, siteRef, skillRef }}>{children}</DarkModeContext.Provider>;
 };
 
 export const useDarkMode = () => {

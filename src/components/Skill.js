@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { skillText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
 
 const Skill = () => {
-    const { white, setWhite, siteRef } = useDarkMode();
-    const skillRef = useRef(null);
+    const { white, setWhite, siteRef, skillRef } = useDarkMode();
 
     useEffect(() => {
         const gap = 50;
@@ -12,7 +11,8 @@ const Skill = () => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             const skillRefOffsetTop = skillRef.current.offsetTop - gap;
-            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRef.current.offsetTop - gap;
+            const siteRefOffsetTop = siteRef.current.offsetTop - gap
+            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRefOffsetTop;
 
             setWhite((prevWhite) => {
                 if (prevWhite === isWhite) {
@@ -27,7 +27,7 @@ const Skill = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [setWhite, siteRef]);
+    }, [setWhite, siteRef, skillRef]);
 
     return (
         <>

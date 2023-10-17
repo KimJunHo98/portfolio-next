@@ -1,0 +1,21 @@
+.scroll_percent {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999999;
+    border-radius: 50%;
+    background: rgb(230, 230, 230);
+    
+    span {
+        width: 100%;
+        line-height: 50px;
+        display: block;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--black);
+        
+    }
+}

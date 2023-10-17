@@ -7,6 +7,7 @@ import Skip from "../components/Skip";
 import Header from "../components/Header";
 import Main from "../app/Main";
 import Footer from "../components/Footer";
+import ScrollPerc from "../utils/ScrollPerc";
 import smooth from "../utils/smooth";
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
                         <Footer />
                     </>
                 )}
+                {!isLoading && <ScrollPerc  />}
             </div>
         </DarkModeProvider>
     );

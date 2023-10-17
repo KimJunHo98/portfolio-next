@@ -95,21 +95,6 @@ export const skillText = [
     },
 ];
 
-export const aboutText = [
-    {
-        text: "a"
-    },
-    {
-        text: "b"
-    },
-    {
-        text: "c"
-    },
-    {
-        text: "d"
-    },
-];
-
 export const siteText = [
     {
         num: "01",

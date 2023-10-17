@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDarkMode } from "../context/DarkModeContext";
 import { headerNav } from "../constants/index";
-import ProgressBar from "../utils/ProgressBar";
 
 import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -18,7 +17,6 @@ const Header = () => {
         <>
             <header id="header" role="header" className={white ? "white" : ""}>
                 <h2 className="blind">헤더</h2>
-                <ProgressBar />
                 <div className="header_inner">
                     <div className="header">
                         <h1 className="header_logo" role="link">

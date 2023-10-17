@@ -8,7 +8,7 @@ const Intro = ({ isShow }) => {
             <div className="container">
                 <div className="inner">
                     <div className="intro">
-                        <h2 className={`intro_title ${isShow ? "show" : ""}`}>i&apos;am front-end developer</h2>
+                        <h2 className={`intro_title ${isShow ? "show" : ""}`}>i&apos;am web publisher</h2>
                         <div className="intro_lines" aria-hidden="true">
                             {lines.map((line) => (
                                 <span key={line.id} className={`${line.class} ${isShow ? "show" : ""}`}></span>
