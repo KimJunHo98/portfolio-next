@@ -3,7 +3,7 @@ import { lines } from "../constants/index";
 
 const Intro = ({ isShow }) => {
     return (
-        <section id="intro">
+        <section id="intro" role="intro_section">
             <h2 className="blind">인트로</h2>
             <div className="container">
                 <div className="inner">

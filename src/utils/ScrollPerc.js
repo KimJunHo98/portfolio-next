@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useDarkMode } from "../context/DarkModeContext";
 
 const ScrollPerc = () => {
     const [percent, setPercent] = useState(0);
-    const { white } = useDarkMode();
 
     useEffect(() => {
         const updatePercent = () => {

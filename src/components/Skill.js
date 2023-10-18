@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { skillText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
 
+// react icons
+import { PiArrowDownRightThin } from "react-icons/pi";
+
 const Skill = () => {
     const { white, setWhite, siteRef, skillRef } = useDarkMode();
 
@@ -11,7 +14,7 @@ const Skill = () => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             const skillRefOffsetTop = skillRef.current.offsetTop - gap;
-            const siteRefOffsetTop = siteRef.current.offsetTop - gap
+            const siteRefOffsetTop = siteRef.current.offsetTop - gap;
             const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRefOffsetTop;
 
             setWhite((prevWhite) => {
@@ -36,7 +39,12 @@ const Skill = () => {
                 <div className="container">
                     <div className="inner">
                         <div className="skill">
-                            <h2 className="skill_title">skill</h2>
+                            <h2 className="skill_title">
+                                skill
+                                <span className="scroll_arrow">
+                                    <PiArrowDownRightThin />
+                                </span>
+                            </h2>
                             <div className="skill_items">
                                 {skillText.map((skill, i) => (
                                     <div className="skill_item_box" key={i}>

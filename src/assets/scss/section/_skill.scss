@@ -40,21 +40,27 @@
         .skill_title {
             width: 48%;
             height: 100%;
-            line-height: 1;
+            display: flex;
+            justify-content: space-between;
             position: sticky;
-            top: 70px;
+            top: 0;
             left: 0;
-            padding-top: 30px;
-            border-bottom: 5px solid var(--white);
+            padding-top: 320px;
+            line-height: 1;
+            border-bottom: 5px solid var(--white300);
             font-family: var(--mainKor-font);
             font-size: 10rem;
             font-weight: 800;
             letter-spacing: -3px;
             text-transform: uppercase;
-            color: var(--white);
+            color: var(--white300);
+
+            .scroll_arrow svg {
+                vertical-align: bottom;
+            }
 
             @include desktop {
-                border-bottom: 4px solid var(--white);
+                border-bottom: 4px solid var(--white300);
                 font-size: 9rem;
                 letter-spacing: -2px;
             }
@@ -63,44 +69,52 @@
             }
             @include mobile {
                 width: 100%;
+                display: block;
                 top: 50%;
                 left: 50%;
-                padding-top: 0;
-                transform: translateY(-50%, -50%);
-                -webkit-transform: translateY(-50%, -50%);
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
                 border-bottom: 0 none;
                 font-size: 10rem;
                 letter-spacing: -1px;
                 text-align: center;
                 background-color: transparent;
+
+                .scroll_arrow {
+                    display: none;
+                }
             }
         }
 
         .skill_items {
-            width: 40%;
-            padding: 450px 0;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 300px 0;
 
             @include mobile {
                 width: 100%;
             }
             
             .skill_item_box {
-                width: 100%;
+                width: 80%;
                 min-height: 200px;
                 margin-bottom: 200px;
                 padding: 20px;
                 border-radius: 10px;
-                box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, .3);
-                background-color: var(--white);
 
                 @include desktop {
+                    width: 90%;
                     margin-bottom: 190px;
                     padding: 15px;
                 }
                 @include tablet {
+                    width: 100%;
                     margin-bottom: 150px;
                 }
                 @include mobile {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -113,9 +127,9 @@
 
                 .skill_name {
                     font-size: 3rem;
-                    font-weight: 600;
+                    font-weight: 800;
                     text-transform: uppercase;
-                    color: var(--black100);
+                    color: var(--white200);
 
                     @include desktop {
                         font-size: 2.8rem;
@@ -124,7 +138,8 @@
                         font-size: 2.4rem;
                     }
                     @include mobile {
-                        font-size: 2rem;
+                        font-size: 2.2rem;
+                        font-weight: 600;
                     }
 
                     .skill_num {
@@ -138,6 +153,9 @@
                 .skill_desc {
                     padding-top: 30px;
                     font-size: 2rem;
+                    font-weight: 600;
+                    color: var(--white200);
+                    text-align: justify;
 
                     @include desktop {
                         padding-top: 25px;
@@ -145,9 +163,11 @@
                     }
                     @include tablet {
                         padding-top: 20px;
-                        font-size: 1.6rem;
                     }
                     @include mobile {
+                        padding-top: 18px;
+                    }
+                    @include s_mobile {
                         padding-top: 18px;
                         font-size: 1.6rem;
                     }
@@ -157,7 +177,8 @@
     }
 
     &.white {
-        background: rgba(255, 255, 255, .9);
+        // background: rgba(255, 255, 255, .9);
+        background: var(--white100);
 
         .skill {
             .skill_title {
@@ -165,7 +186,8 @@
                 color: var(--black);
 
                 @include mobile {
-                    border-bottom: 0 none
+                    border-bottom: 0 none;
+                    color: var(--white300);
                 }
             }
     
@@ -174,10 +196,11 @@
                 z-index: 9;
 
                 .skill_item_box {
-                    background-color: var(--white);
-    
                     .skill_name {
-                        color: var(--black100);
+                        color: var(--black);
+                    }
+                    .skill_desc {
+                        color: var(--black);
                     }
                 }
             }

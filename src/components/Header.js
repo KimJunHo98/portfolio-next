@@ -44,7 +44,7 @@ const Header = () => {
                             <span className="btn_bar"></span>
                         </div>
                         <div className={`header_nav_mobile ${active ? "active" : ""}`}>
-                            <ul className="mobile_menu">
+                            <ul className="mobile_menu" aria-label="모바일메뉴">
                                 {headerNav.map((nav) => (
                                     <li key={nav.title} className="menu_item">
                                         <AnchorLink href={nav.url}>{nav.title}</AnchorLink>

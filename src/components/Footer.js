@@ -1,15 +1,12 @@
 import React from "react";
 
-// fontawesome
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
     const url1 = "https://github.com/KimJunHo98";
     const url2 = "https://www.notion.so/My-Blog-f671a512fe944b94a56a80576b5fc731";
 
     return (
-        <footer id="footer">
+        <footer id="footer" role="footer">
             <h2 className="blind">푸터</h2>
             <div className="inner">
                 <div className="footer">

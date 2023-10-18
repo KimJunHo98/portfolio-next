@@ -50,7 +50,7 @@ export const lines = [
 
 export const skillText = [
     {
-        name: "html / css",
+        name: "html & css",
         desc: "시멘틱 태그 사용, 웹표준, 웹접근성을 준수하고 디바이스에 따른 플렉스와 그리드를 사용한 반응형 페이지 제작과 그에 맞는 스타일 지정 및 애니메이션을 사용할 수 있습니다. 또한 부트스트랩, 앤트디자인 등의 그리드 템플릿을 사용할 수 있습니다.",
     },
     {

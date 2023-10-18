@@ -3,13 +3,11 @@ import { siteText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
 import Link from "next/link";
 
-// fontawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+// react icons
+import { PiArrowRightThin } from "react-icons/pi";
 
 const Site = () => {
     const { siteRef } = useDarkMode();
-    console.log(siteRef);
 
     return (
         <section id="site" className="horizontal_wrap" ref={siteRef}>
@@ -17,11 +15,11 @@ const Site = () => {
             <div className="container">
                 <div className="inner">
                     <div className="site">
-                        <h2 className="site_main_title">site</h2>
                         <div className="site_items">
                             <div className="site_item_box intro">
+                                <p className="site_intro_title">welcome to</p>
                                 <p className="site_intro_title">my projects</p>
-                                <span>scroll <FontAwesomeIcon icon={faArrowRightLong} /></span>
+                                <p className="site_intro_title">scroll <span className="scroll_arrow"><PiArrowRightThin /></span></p>
                             </div>
                             {siteText.map((site ,i) => (
                                 <div className="site_item_box" key={i}>
@@ -29,8 +27,8 @@ const Site = () => {
                                     <p>{site.num}</p>
                                     <p>{site.skill}</p>
                                     <p>{site.desc}</p>
-                                    <Link href={site.git}>github</Link>
-                                    <Link href={site.view}>view</Link>
+                                    <Link href={site.git} role="link" aria-label="깃허브 링크">github</Link>
+                                    <Link href={site.view} role="link" aria-label="뷰 링크">view</Link>
                                 </div>
                             ))}
                         </div>
