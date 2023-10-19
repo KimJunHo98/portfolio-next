@@ -39,8 +39,9 @@
                 display: block;
                 opacity: 0;
                 text-transform: uppercase;
-                font-size: 8rem;
+                font-size: 10rem;
                 font-weight: 800;
+                letter-spacing: -3px;
                 color: var(--white200);
                 
                 & span {
@@ -66,14 +67,18 @@
             width: 100%;
             padding: 0 0 50px;
 
-            .text_items {
-                opacity: 0;
-                font-size: 1.8rem;
-                font-weight: 400;
-                color: var(--white);
+            .text_items_box {
+                width: 100%;
+                
+                .text_items{
+                    opacity: 0;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: var(--white);
 
-                @include mobile {
-                    font-size: 1.6rem;
+                    @include mobile {
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }

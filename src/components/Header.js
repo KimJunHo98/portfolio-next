@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useDarkMode } from "../context/DarkModeContext";
-import { headerNav } from "../constants/index";
-
 import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { useDarkMode } from '../context/DarkModeContext';
+import { headerNav } from "../constants/index";
+
 
 const Header = () => {
-    const [active, setActive] = useState(false);
     const { white } = useDarkMode();
+    const [active, setActive] = useState(false);
 
     const hadlekNavMobileClick = () => {
         setActive((prev) => !prev);

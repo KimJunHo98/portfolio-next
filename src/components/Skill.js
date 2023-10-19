@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { skillText } from "../constants/index";
-import { useDarkMode } from "../context/DarkModeContext";
+import { useDarkMode } from '../context/DarkModeContext';
 
 // react icons
 import { PiArrowDownRightThin } from "react-icons/pi";
 
 const Skill = () => {
-    const { white, setWhite, siteRef, skillRef } = useDarkMode();
-
+    const { white, setWhite, siteOffsetRef, skillRef } = useDarkMode();
+    
     useEffect(() => {
         const gap = 50;
 
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             const skillRefOffsetTop = skillRef.current.offsetTop - gap;
-            const siteRefOffsetTop = siteRef.current.offsetTop - gap;
+            const siteRefOffsetTop = siteOffsetRef.current.offsetTop - gap;
             const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRefOffsetTop;
 
             setWhite((prevWhite) => {
@@ -24,13 +24,14 @@ const Skill = () => {
                 return isWhite;
             });
         };
-
+        
         window.addEventListener("scroll", handleScroll);
-
+        
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [setWhite, siteRef, skillRef]);
+    }, [setWhite, skillRef, siteOffsetRef]);
+
 
     return (
         <>
