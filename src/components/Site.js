@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import siteImg from "../assets/images/site5-pc.png";
 import Link from "next/link";
 import { siteText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
@@ -9,7 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PiArrowDownRightThin } from "react-icons/pi";
 
 const Site = () => {
-    const { siteRef, siteOffsetRef  } = useDarkMode();
+    const { siteRef, siteOffsetRef } = useDarkMode();
     const sectionRef = useRef([]);
 
     useEffect(() => {
@@ -23,7 +25,7 @@ const Site = () => {
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,
-                start: "top 1px",
+                start: "top top",
                 end: () => "+=" + horizontal.offsetWidth,
                 pin: true,
                 scrub: 1,
@@ -59,16 +61,33 @@ const Site = () => {
                                 </div>
                                 {siteText.map((site, i) => (
                                     <div className={`site_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>
-                                        <h2 className="site_sub_title">{site.title}</h2>
-                                        <p>{site.num}</p>
-                                        <p>{site.skill}</p>
-                                        <p>{site.desc}</p>
-                                        <Link href={site.git} target="_blank" role="link" aria-label="깃허브 링크">
-                                            github
-                                        </Link>
-                                        <Link href={site.view} target="_blank" role="link" aria-label="뷰 링크">
-                                            view
-                                        </Link>
+                                        <div className="site_thumb_img">
+                                            <Image src={siteImg} alt={site.title} />
+                                        </div>
+                                        <div className="site_text_box">
+                                            <h2 className="site_sub_title">
+                                                {site.title}
+                                            </h2>
+                                            <ul>
+                                                <li className="site_join">{site.join}</li>
+                                                <li className="site_skill">{site.skill}</li>
+                                            </ul>
+                                            <p className="site_desc">{site.desc}</p>
+                                            <div className="site_link_box">
+                                                <Link
+                                                    href={site.git}
+                                                    className="link_btns"
+                                                    target="_blank"
+                                                    role="link"
+                                                    aria-label="깃허브 링크"
+                                                >
+                                                    github
+                                                </Link>
+                                                <Link href={site.view} className="link_btns" target="_blank" role="link" aria-label="뷰 링크">
+                                                    view
+                                                </Link>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>

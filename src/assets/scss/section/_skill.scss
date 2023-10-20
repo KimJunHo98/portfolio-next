@@ -48,10 +48,9 @@
             padding-top: 320px;
             line-height: 1;
             border-bottom: 5px solid var(--white300);
-            font-family: var(--mainKor-font);
             font-size: 10rem;
-            font-weight: 800;
-            letter-spacing: -3px;
+            font-weight: 600;
+            letter-spacing: -8px;
             text-transform: uppercase;
             color: var(--white300);
 
@@ -152,6 +151,7 @@
                 }
                 .skill_desc {
                     padding-top: 30px;
+                    font-family: var(--mainKor-font);
                     font-size: 2rem;
                     font-weight: 600;
                     color: var(--white200);
