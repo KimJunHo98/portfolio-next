@@ -40,12 +40,12 @@ const Skill = () => {
                 <div className="container">
                     <div className="inner">
                         <div className="skill">
-                            <h2 className="skill_title">
+                            <h3 className="skill_title">
                                 skill
                                 <span className="scroll_arrow">
                                     <PiArrowDownRightThin />
                                 </span>
-                            </h2>
+                            </h3>
                             <div className="skill_items">
                                 {skillText.map((skill, i) => (
                                     <div className="skill_item_box" key={i}>

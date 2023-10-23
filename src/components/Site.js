@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import siteImg from "../assets/images/site5-pc.png";
 import Link from "next/link";
 import { siteText } from "../constants/index";
 import { useDarkMode } from "../context/DarkModeContext";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -62,7 +62,7 @@ const Site = () => {
                                 {siteText.map((site, i) => (
                                     <div className={`site_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>
                                         <div className="site_thumb_img">
-                                            <Image src={siteImg} alt={site.title} />
+                                            <Image src={`/images/${site.img}`} alt={site.title} style={{objectFit: "cover"}} width={800} height={800} />
                                         </div>
                                         <div className="site_text_box">
                                             <h2 className="site_sub_title">

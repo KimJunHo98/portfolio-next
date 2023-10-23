@@ -23,7 +23,8 @@ const About = () => {
         textRefCurrent.forEach((el) => observer.observe(el));
 
         return () => {
-            textRefCurrent.forEach((el) => observer.unobserve(el));
+            observer.disconnect();
+            // 모든 요소를 해제하는 메소드 disconnect
         };
     }, []);
 

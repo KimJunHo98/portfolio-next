@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useDarkMode } from '../context/DarkModeContext';
 import { headerNav } from "../constants/index";
@@ -20,9 +20,9 @@ const Header = () => {
                 <div className="header_inner">
                     <div className="header">
                         <h1 className="header_logo" role="link">
-                            <Link href="/">
+                            <AnchorLink href="#intro">
                                 kinjunho&apos;s<span>portfolio</span>
-                            </Link>
+                            </AnchorLink>
                         </h1>
                         <nav className="header_nav_pc" role="navigation" aria-label="메인메뉴">
                             <ul className="pc_menu">
