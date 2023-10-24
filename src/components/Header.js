@@ -21,7 +21,7 @@ const Header = () => {
                     <div className="header">
                         <h1 className="header_logo" role="link">
                             <AnchorLink href="#intro">
-                                kinjunho&apos;s<span>portfolio</span>
+                                kimjunho&apos;s<span>portfolio</span>
                             </AnchorLink>
                         </h1>
                         <nav className="header_nav_pc" role="navigation" aria-label="메인메뉴">

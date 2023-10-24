@@ -17,33 +17,6 @@ export const headerNav = [
     },
 ];
 
-export const lines = [
-    {
-        id: 0,
-        class: "line line1",
-    },
-    {
-        id: 1,
-        class: "line line2",
-    },
-    {
-        id: 2,
-        class: "line line3",
-    },
-    {
-        id: 3,
-        class: "line line4",
-    },
-    {
-        id: 4,
-        class: "line line5",
-    },
-    {
-        id: 5,
-        class: "line line6",
-    },
-];
-
 export const skillText = [
     {
         name: "html & css",

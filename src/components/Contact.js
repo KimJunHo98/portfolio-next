@@ -34,7 +34,7 @@ const Contact = () => {
 
         const contactTextObserver = new IntersectionObserver(
             (entries) => {
-                console.log(entries);
+                // console.log(entries);
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.style.color = "var(--black)";

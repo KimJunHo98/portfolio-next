@@ -9,16 +9,22 @@
         }
     }
     @include tablet {
+        height: 70vh;
+
         .inner {
             padding: 0 15px;
         }
     }
     @include mobile {
+        height: 60vh;
+
         .inner {
             padding: 0 15px;
         }
     }
     @include s_mobile {
+        height: 50vh;
+
         .inner {
             padding: 0 12px;
         }
@@ -27,115 +33,65 @@
     .intro {
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
+        padding: 150px 0 0;
+        position: relative;
+        overflow: hidden;
+        font-family: var(--subEng-font);
+        text-transform: uppercase;
 
-        .intro_title {
-            width: 100%;
-            position: relative;
-            top: 0px;
-            right: -120%;
-            font-size: 8vw;
-            font-weight: 800;
-            white-space: nowrap;
-            text-indent: -0.3vw;
-            letter-spacing: -0.3vw;
-            text-transform: uppercase;
-            color: var(--white);
-            animation: slideText 1s cubic-bezier(1, 0, 0, 0.94) .7s forwards;
-
-            &.show {
-                @keyframes slideText {
-                    0% {
-                        right: -120%;
-                    }
-                    100% {
-                        right: 0;
-                    }
-                }
-            }
-        }
-        .intro_lines {
-            width: 100%;
-            
-            .line {
-                width: 50%;
-                height: 3px;
-                display: block;
-                margin-bottom: 8px;
-                opacity: 0;
-                background-color: var(--white100);
-
-                &.line1 {
-                    transition: all .5s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.line2 {
-                    width: 60%;
-                    height: 6px;
-                    transition: all .7s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.line3 {
-                    width: 70%;
-                    height: 9px;
-                    transition: all .9s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.line4 {
-                    width: 80%;
-                    height: 12px;
-                    transition: all 1.1s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.line5 {
-                    width: 90%;
-                    height: 16px;
-                    transition: all 1.3s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.line6 {
-                    width: 100%;
-                    height: 19px;
-                    transition: all 1.5s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-                    transform: translateY(300px);
-                }
-                &.show {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        }
         .intro_text {
-            width: 100%;
-            height: 400px;
-            display: flex;
-            padding: 20px;
-            opacity: 0;
-            transition: all 1.7s cubic-bezier(1, 0, 0, 0.94) 1.5s;
-            transform: translateY(300px);
-            background-color: var(--white100);
+            line-height: 1;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            white-space: nowrap;
+            font-size: 11rem;
+            -webkit-text-stroke: 1px var(--white);
+            color: transparent;
 
-            .intro_desc {
-                height: 100%;
+            @include desktop {
+                font-size: 9vw;
+            }
+            @include mobile {
+                font-size: 8vw;
+            }
+        }
+        .mask_container {
+            height: 110px;
+            position: relative;
+            overflow: hidden;
+            
+            @include desktop {
+                height: 9vw;
+            }
+            @include mobile {
+                height: 8vw;
+            }
+
+            .intro_text_mask {
                 line-height: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                white-space: nowrap;
+                font-size: 11rem;
                 color: var(--white);
 
-                .desc_text {
-                    font-size: 4rem;
-                    font-weight: 800;
+                @include desktop {
+                    font-size: 9vw;
                 }
-            }
-            // .profile_img {
-            //     width: 300px;
-            //     height: 100%;
-            //     position: relative;
-            // }
-            &.show {
-                opacity: 1;
-                transform: translateY(0);
+                @include mobile {
+                    font-size: 8vw;
+                }
+
+                .text_mask_items {
+                    @for $i from 1 through 6 {
+                        &.item#{$i + 1} {
+                            -webkit-text-stroke: 1px var(--white#{$i}00);
+                            color: var(--white#{$i}00);
+                        }
+                    }
+                }
             }
         }
     }
