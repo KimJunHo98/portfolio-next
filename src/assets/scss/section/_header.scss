@@ -1,12 +1,3 @@
-.header_progress_bar {
-    height: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20000;
-    background-color: #d3ccc9;
-}
-
 #header {
     width: 100%;
     @include position-fixed;
@@ -14,15 +5,11 @@
     transition: all 1s ease-in-out;
     
     .header_inner {
-        background-color: rgba(0,0,0, .1);
-        backdrop-filter: blur(15px);
-
         .header {
-            padding: 15px 20px;
             width: 100%;
-            height: 70px;
             @include flex-between;
             position: relative;
+            padding: 15px 20px;
 
             @include tablet {
                 padding: 15px;
@@ -37,13 +24,17 @@
             .header_logo {
                 height: 100%;
                 line-height: 1;
-                padding-top: 5px;
+                padding: 14px;
                 text-align: center;
                 text-transform: uppercase;
                 font-size: 1.8rem;
+                border: 2px solid var(--white);
+                border-radius: 30px;
+                background-color: rgba(0,0,0, .1);
+                backdrop-filter: blur(15px);
     
                 a {
-                    color: var(--white100);
+                    color: var(--white);
 
                     span {
                         display: block;
@@ -52,6 +43,13 @@
                 }
             }
             .header_nav_pc {
+                height: 100%;
+                padding: 17px;
+                border: 2px solid var(--white);
+                border-radius: 30px;
+                background-color: rgba(0,0,0, .1);
+                backdrop-filter: blur(15px);
+
                 .pc_menu {
                     width: 100%;
                     height: 100%;
@@ -100,11 +98,13 @@
                 }
             }
             .mobile_menu_btn {
-                width: 40px;
-                height: 40px;
+                width: 60px;
+                height: 60px;
                 display: none;
-                border-radius: 6px;
-                background-color: var(--white100);
+                border-radius: 15px;
+                border: 2px solid var(--white);
+                background-color: rgba(0,0,0, .1);
+                backdrop-filter: blur(15px);
                 cursor: pointer;
 
                 &.active .btn_bar::after, &.active .btn_bar::before {
@@ -112,15 +112,15 @@
                 }
 
                 .btn_bar {
-                    width: 30px;
+                    width: 40px;
                     height: 2px;
                     display: block;
                     position: relative;
-                    left: 50%;
-                    margin-top: 19px;               
-                    transform: translateX(-50%);
+                    top: 50%;
+                    left: 50%;               
+                    transform: translate(-50%, -50%);
                     transition: all .3s ease-in;
-                    background-color: var(--white300);
+                    background-color: var(--white);
 
                     &::after, &::before {
                         content: '';
@@ -129,14 +129,14 @@
                         display: block;
                         position: absolute;
                         transition: all .3s ease-in;
-                        background-color: var(--white300);
+                        background-color: var(--white);
                     }
                     &::after {
-                        top: 7px;
+                        top: 10px;
                         left: 0;
                     }
                     &::before {
-                        bottom: 7px;
+                        bottom: 10px;
                         right: 0;
                     }             
                 }
@@ -192,31 +192,38 @@
         .header_inner {
             .header {
                 .header_logo {
+                    border: 2px solid var(--black300);
+                    background-color: transparent;
+
                     a {
-                        color: var(--black);
+                        color: var(--black300);
                     }
                 }
                 .header_nav_pc {
+                    border: 2px solid var(--black300);
+                    background-color: transparent;
+
                     .pc_menu {
                         .menu_item {
                             a {
-                                color: var(--black);
+                                color: var(--black300);
     
                                 &::before {
-                                    background-color: var(--black);
+                                    background-color: var(--black300);
                                 }
                             }
                         }
                     }
                 }
                 .mobile_menu_btn {
-                    background-color: var(--white300);
+                    border: 2px solid var(--black300);
+                    background-color: transparent;
 
                     .btn_bar {
-                        background-color: var(--white100);
+                        background-color: var(--black300);
     
                         &::after, &::before {
-                            background-color: var(--white100);
+                            background-color: var(--black300);
                         }            
                     }
                 }
