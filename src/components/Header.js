@@ -39,7 +39,7 @@ const Header = () => {
                             aria-expanded={active ? true : false}
                             aria-controls="mobile_menu"
                             role="button"
-                            tabIndex="0"
+                            tabIndex="1"
                         >
                             <span className="btn_bar"></span>
                         </div>

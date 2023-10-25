@@ -1,7 +1,7 @@
 #skill {
     width: 100%;
-    padding: 100px 0;
-    transition: all .5s ease-in-out;
+    height: 100vh;
+    background-color: #ffffffe6;
 
     @include desktop {
         .container { 
@@ -28,173 +28,236 @@
     .skill {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        @include mobile {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .skill_title {
-            width: 48%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            left: 0;
-            padding-top: 320px;
-            line-height: 1;
-            border-bottom: 5px solid var(--white300);
-            font-size: 10rem;
-            font-weight: 600;
-            letter-spacing: -8px;
-            text-transform: uppercase;
-            color: var(--white300);
-
-            .scroll_arrow svg {
-                vertical-align: bottom;
-            }
-
-            @include desktop {
-                border-bottom: 4px solid var(--white300);
-                font-size: 9rem;
-                letter-spacing: -2px;
-            }
-            @include tablet {
-                font-size: 8rem;
-            }
-            @include mobile {
-                width: 100%;
-                display: block;
-                top: 50%;
-                left: 50%;
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                border-bottom: 0 none;
-                font-size: 10rem;
-                letter-spacing: -1px;
-                text-align: center;
-                background-color: transparent;
-
-                .scroll_arrow {
-                    display: none;
-                }
-            }
-        }
+        overflow: hidden;
 
         .skill_items {
-            width: 45%;
+            width: 100vw;
+            height: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            padding: 300px 0;
+            flex-direction: row;
+            align-items: center;
+            gap: 0 100px;
 
-            @include mobile {
-                width: 100%;
-            }
-            
             .skill_item_box {
-                width: 80%;
-                min-height: 200px;
-                margin-bottom: 200px;
-                padding: 20px;
-                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-shrink: 0;
 
-                @include desktop {
-                    width: 90%;
-                    margin-bottom: 190px;
-                    padding: 15px;
-                }
-                @include tablet {
-                    width: 100%;
-                    margin-bottom: 150px;
-                }
-                @include mobile {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    margin-bottom: 0;
-                    margin: 50px 0 15%;
-                }
-                @include s_mobile {
-                    margin: 50px 0 20%;
-                }
+                &.title_box {
+                    align-items: center;
+                    justify-content: center;
 
-                .skill_name {
-                    font-size: 3rem;
-                    font-weight: 800;
-                    text-transform: uppercase;
-                    color: var(--white200);
-
-                    @include desktop {
-                        font-size: 2.8rem;
-                    }
-                    @include tablet {
-                        font-size: 2.4rem;
-                    }
-                    @include mobile {
-                        font-size: 2.2rem;
+                    .skill_title {
+                        font-size: 10vw;
                         font-weight: 600;
-                    }
+                        font-family: var(--subEng-font);
+                        letter-spacing: -1px;
+                        text-transform: uppercase;
+                        color: var(--black);
 
-                    .skill_num {
-                        padding-right: 10px;
+                        .scroll_arrow {
+                            padding-left: 50px;
 
-                        @include mobile {
-                            padding-right: 5px;
+                            svg {
+                                margin-bottom: 20px;
+                                vertical-align: middle;
+                            }
                         }
                     }
                 }
-                .skill_desc {
-                    padding-top: 30px;
-                    font-family: var(--mainKor-font);
-                    font-size: 2rem;
-                    font-weight: 600;
-                    color: var(--white200);
-                    text-align: justify;
+                @for $i from 1 through 11 {
+                    &.item#{$i} {
+                        width: 500px;
+                        height: 70%;
+                        padding: 30px;
+                        border: 1px solid #000;
+                        border-radius: 30px;
+                        background-color: var(--white);
 
-                    @include desktop {
-                        padding-top: 25px;
-                        font-size: 1.8rem;
-                    }
-                    @include tablet {
-                        padding-top: 20px;
-                    }
-                    @include mobile {
-                        padding-top: 18px;
-                    }
-                    @include s_mobile {
-                        padding-top: 18px;
-                        font-size: 1.6rem;
+                        .skill_name {
+                            padding: 100px 0;
+                            font-size: 5rem;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-family: var(--mainEng-font);
+                        }
+                        .skill_desc {
+                            line-height: 1.6;
+                            text-align: justify;
+                            font-size: 2rem;
+                            font-weight: 400;
+                            font-family: var(--mainKor-font);
+                        }
                     }
                 }
             }
         }
     }
 
+    // .skill {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+
+    //     @include mobile {
+    //         flex-direction: column;
+    //         align-items: flex-start;
+    //     }
+
+    //     .skill_title {
+    //         width: 48%;
+    //         height: 100%;
+    //         display: flex;
+    //         justify-content: space-between;
+    //         position: sticky;
+    //         top: 0;
+    //         left: 0;
+    //         padding-top: 320px;
+    //         line-height: 1;
+    //         border-bottom: 5px solid var(--white300);
+    //         font-size: 10rem;
+    //         font-weight: 600;
+    //         letter-spacing: -8px;
+    //         text-transform: uppercase;
+    //         color: var(--white300);
+
+    //         .scroll_arrow svg {
+    //             vertical-align: bottom;
+    //         }
+
+    //         @include desktop {
+    //             border-bottom: 4px solid var(--white300);
+    //             font-size: 9rem;
+    //             letter-spacing: -2px;
+    //         }
+    //         @include tablet {
+    //             font-size: 8rem;
+    //         }
+    //         @include mobile {
+    //             width: 100%;
+    //             display: block;
+    //             top: 50%;
+    //             left: 50%;
+    //             transform: translateY(-50%);
+    //             -webkit-transform: translateY(-50%);
+    //             border-bottom: 0 none;
+    //             font-size: 10rem;
+    //             letter-spacing: -1px;
+    //             text-align: center;
+    //             background-color: transparent;
+
+    //             .scroll_arrow {
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+
+    //     .skill_items {
+    //         width: 45%;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: flex-end;
+    //         padding: 300px 0;
+
+    //         @include mobile {
+    //             width: 100%;
+    //         }
+            
+    //         .skill_item_box {
+    //             width: 80%;
+    //             min-height: 200px;
+    //             margin-bottom: 200px;
+    //             padding: 20px;
+    //             border-radius: 10px;
+
+    //             @include desktop {
+    //                 width: 90%;
+    //                 margin-bottom: 190px;
+    //                 padding: 15px;
+    //             }
+    //             @include tablet {
+    //                 width: 100%;
+    //                 margin-bottom: 150px;
+    //             }
+    //             @include mobile {
+    //                 width: 100%;
+    //                 display: flex;
+    //                 flex-direction: column;
+    //                 align-items: flex-start;
+    //                 margin-bottom: 0;
+    //                 margin: 50px 0 15%;
+    //             }
+    //             @include s_mobile {
+    //                 margin: 50px 0 20%;
+    //             }
+
+    //             .skill_name {
+    //                 font-size: 3rem;
+    //                 font-weight: 800;
+    //                 text-transform: uppercase;
+    //                 color: var(--white200);
+
+    //                 @include desktop {
+    //                     font-size: 2.8rem;
+    //                 }
+    //                 @include tablet {
+    //                     font-size: 2.4rem;
+    //                 }
+    //                 @include mobile {
+    //                     font-size: 2.2rem;
+    //                     font-weight: 600;
+    //                 }
+
+    //                 .skill_num {
+    //                     padding-right: 10px;
+
+    //                     @include mobile {
+    //                         padding-right: 5px;
+    //                     }
+    //                 }
+    //             }
+    //             .skill_desc {
+    //                 padding-top: 30px;
+    //                 font-family: var(--mainKor-font);
+    //                 font-size: 2rem;
+    //                 font-weight: 600;
+    //                 color: var(--white200);
+    //                 text-align: justify;
+
+    //                 @include desktop {
+    //                     padding-top: 25px;
+    //                     font-size: 1.8rem;
+    //                 }
+    //                 @include tablet {
+    //                     padding-top: 20px;
+    //                 }
+    //                 @include mobile {
+    //                     padding-top: 18px;
+    //                 }
+    //                 @include s_mobile {
+    //                     padding-top: 18px;
+    //                     font-size: 1.6rem;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
     &.white {
-        background-color: #ffffffe6;
+        
 
         .skill {
-            .skill_title {
-                border-bottom: 5px solid var(--black);
-                color: var(--black);
-
-                @include mobile {
-                    border-bottom: 0 none;
-                    color: var(--white300);
-                }
-            }
-    
             .skill_items {
-                position: relative;
-                z-index: 9;
-
                 .skill_item_box {
+                    .skill_title {
+                        color: var(--black);
+                    }
+    
                     .skill_name {
                         color: var(--black);
                     }

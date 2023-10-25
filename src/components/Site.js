@@ -16,7 +16,7 @@ const Site = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
+        
         const horizontal = siteRef.current;
         const section = sectionRef.current;
 
@@ -43,7 +43,7 @@ const Site = () => {
     return (
         <>
             <aside className="site_offsetTop" ref={siteOffsetRef}></aside>
-            <section id="site" className="horizontal" ref={siteRef}>
+            <section id="site" className="horizontal" ref={siteRef} aria-label="Horizontal Scroll Section">
                 <h2 className="blind">사이트</h2>
                 <div className="container">
                     <div className="inner">
