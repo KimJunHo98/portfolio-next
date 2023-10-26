@@ -10,6 +10,7 @@ const Skill = () => {
     const skillRef = useRef(null);
     const horizItemRef = useRef([]);
 
+    // 스크롤 시 색상 변경(context에 값 넘겨줌)
     useEffect(() => {
         const gap = 50;
 
@@ -34,6 +35,7 @@ const Skill = () => {
         };
     }, [setWhite, skillOffsetRef, siteOffsetRef]);
 
+    // 가로 스크롤
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 

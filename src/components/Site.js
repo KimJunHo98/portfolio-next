@@ -14,9 +14,10 @@ const Site = () => {
     const { siteRef, siteOffsetRef } = useDarkMode();
     const sectionRef = useRef([]);
 
+    // 가로스크롤
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        
+
         const horizontal = siteRef.current;
         const section = sectionRef.current;
 
@@ -62,12 +63,16 @@ const Site = () => {
                                 {siteText.map((site, i) => (
                                     <div className={`site_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>
                                         <div className="site_thumb_img">
-                                            <Image src={`/images/${site.img}`} alt={site.title} style={{objectFit: "cover"}} width={800} height={800} />
+                                            <Image
+                                                src={`/images/${site.img}`}
+                                                alt={site.title}
+                                                style={{ objectFit: "cover" }}
+                                                width={800}
+                                                height={800}
+                                            />
                                         </div>
                                         <div className="site_text_box">
-                                            <h2 className="site_sub_title">
-                                                {site.title}
-                                            </h2>
+                                            <h2 className="site_sub_title">{site.title}</h2>
                                             <ul>
                                                 <li className="site_join">{site.join}</li>
                                                 <li className="site_skill">{site.skill}</li>
@@ -83,7 +88,13 @@ const Site = () => {
                                                 >
                                                     github
                                                 </Link>
-                                                <Link href={site.view} className="link_btns" target="_blank" role="link" aria-label="뷰 링크">
+                                                <Link
+                                                    href={site.view}
+                                                    className="link_btns"
+                                                    target="_blank"
+                                                    role="link"
+                                                    aria-label="사이트 링크"
+                                                >
                                                     view
                                                 </Link>
                                             </div>

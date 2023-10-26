@@ -12,6 +12,7 @@ const Intro = () => {
     const textArr2 = useMemo(() => "Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down".split(" "), []);
     const textArr3 = useMemo(() => "frontend developer frontend developer frontend developer".split(" "), []);
 
+    // 텍스트 마우스 오버
     useEffect(() => {
         const container = containerRef.current;
         const mask = maskRef.current;
@@ -39,6 +40,7 @@ const Intro = () => {
         };
     }, []);
 
+    // 무한 마퀴텍스트
     useEffect(() => {
         const firstPara = firstParaRef.current;
         const secondPara = secondParaRef.current;

@@ -5,11 +5,11 @@ import Skill from "../components/Skill";
 import Site from "../components/Site";
 import Contact from "../components/Contact";
 
-const Main = ({isShow }) => {
+const Main = () => {
     
     return (
         <main id="main" role="main">
-            <Intro isShow={isShow} />
+            <Intro />
             <About />
             <Skill />
             <Site />

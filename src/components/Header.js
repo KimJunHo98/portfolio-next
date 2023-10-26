@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Link from "next/link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useDarkMode } from '../context/DarkModeContext';
 import { headerNav } from "../constants/index";
@@ -39,7 +38,6 @@ const Header = () => {
                             aria-expanded={active ? true : false}
                             aria-controls="mobile_menu"
                             role="button"
-                            tabIndex="1"
                         >
                             <span className="btn_bar"></span>
                         </div>

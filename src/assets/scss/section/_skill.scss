@@ -77,12 +77,36 @@
                         border-radius: 30px;
                         background-color: var(--white);
 
+                        @include tablet {
+                            width: 400px;
+                            height: 60%;
+                        }
+                        @include mobile {
+                            width: 70%;
+                            height: 60%;
+                        }
+                        @include s_mobile {
+                            height: 50%;
+                        }
+
                         .skill_name {
                             padding: 100px 0;
                             font-size: 5rem;
                             text-transform: uppercase;
                             font-weight: 600;
                             font-family: var(--mainEng-font);
+
+                            @include tablet {
+                                padding: 60px 0;
+                                font-size: 4rem;
+                            }
+                            @include mobile {
+                                padding: 50px 0;
+                                font-size: 3rem;
+                            }
+                            @include s_mobile {
+                                font-size: 2.6rem;
+                            }
                         }
                         .skill_desc {
                             line-height: 1.6;
@@ -90,6 +114,13 @@
                             font-size: 2rem;
                             font-weight: 400;
                             font-family: var(--mainKor-font);
+
+                            @include mobile {
+                                font-size: 2rem;
+                            }
+                            @include s_mobile {
+                                font-size: 1.6rem;
+                            }
                         }
                     }
                 }

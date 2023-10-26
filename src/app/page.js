@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { DarkModeProvider } from "../context/DarkModeContext";
 import Loading from "../components/Loading";
+import SlideCover from "../components/SlideCover";
 import Skip from "../components/Skip";
 import Header from "../components/Header";
 import Main from "../app/Main";
@@ -11,22 +12,32 @@ import smooth from "../utils/smooth";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [isShow, setIsShow] = useState(false);
+    const [percentage, setPercentage] = useState(0);
 
     useEffect(() => {
+        let currentPercentage = 0;
         setIsLoading(true);
-        setIsShow(false);
 
         const loadingTimer = setTimeout(() => {
-            setIsLoading(false);
-        }, 4000);
-        const showTimer = setTimeout(() => {
-            setIsShow(true);
-        }, 4100);
+            const interval = setInterval(() => {
+                setPercentage((prevPercentage) => {
+                    currentPercentage = prevPercentage + 1;
+
+                    if (currentPercentage >= 100) {
+                        clearInterval(interval);
+
+                        setTimeout(() => {
+                            setIsLoading(false);
+                        }, 1000);
+                    }
+
+                    return currentPercentage;
+                });
+            }, 70);
+        }, 300);
 
         return () => {
             clearTimeout(loadingTimer);
-            clearTimeout(showTimer);
         };
     }, []);
 
@@ -38,16 +49,17 @@ const Home = () => {
         <DarkModeProvider>
             <div id="wrap">
                 {isLoading ? (
-                    <Loading />
+                    <Loading percentage={percentage} />
                 ) : (
                     <>
+                        <SlideCover isLoading={isLoading} />
                         <Skip />
                         <Header />
-                        <Main isShow={isShow} />
+                        <Main />
                         <Footer />
                     </>
                 )}
-                {!isLoading && <ScrollPerc  />}
+                {!isLoading && <ScrollPerc />}
             </div>
         </DarkModeProvider>
     );

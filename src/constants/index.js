@@ -40,7 +40,7 @@ export const skillText = [
     },
     {
         name: "next.js",
-        desc: "SSR과 SEO대응이 필요한 경우 넥스트로 변환할 수 있으며, 리액트와 동일하게 useState, useEffect와 같은 훅을 사용할 수 있으며 부족한 부분은 지속적으로 학습할 것입니다."
+        desc: "SSR과 SEO대응이 필요한 경우 넥스트로 변환할 수 있으며, 리액트와 동일하게 useState, useEffect와 같은 훅을 사용할 수 있으며 부족한 부분은 지속적으로 학습하여 프로젝트를 성공적으로 마칠 수 있도록 할 것 입니다."
     },
     {
         name: "node.js",
