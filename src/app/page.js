@@ -33,7 +33,7 @@ const Home = () => {
 
                     return currentPercentage;
                 });
-            }, 70);
+            }, 40);
         }, 300);
 
         return () => {

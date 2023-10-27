@@ -9,7 +9,7 @@ export const headerNav = [
     },
     {
         title: "site",
-        url: "#site",
+        url: "#site_parallax",
     },
     {
         title: "contact",

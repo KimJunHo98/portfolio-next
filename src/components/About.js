@@ -83,12 +83,6 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* <div className="about_bottom">
-                            <div className="profile_img">
-                                
-                            </div>
-                            <span className="scroll_arrow"></span>
-                        </div> */}
                     </div>
                 </div>
             </div>

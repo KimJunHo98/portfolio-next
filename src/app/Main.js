@@ -4,6 +4,7 @@ import About from "../components/About";
 import Skill from "../components/Skill";
 import Site from "../components/Site";
 import Contact from "../components/Contact";
+import ParallaxText from "../components/ParallaxText";
 
 const Main = () => {
     
@@ -12,6 +13,7 @@ const Main = () => {
             <Intro />
             <About />
             <Skill />
+            <ParallaxText />
             <Site />
             <Contact />
         </main>

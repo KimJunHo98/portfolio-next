@@ -1,0 +1,17 @@
+.pin-spacer {
+    padding-bottom: 1000px !important;
+}
+#site_parallax {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .parallax_item {
+        text-transform: uppercase;
+        font-family: var(--subEng-font);
+        font-size: 5vw;
+        color: var(--white);
+    }
+}
