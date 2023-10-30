@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Skill = () => {
-    const { setWhite, siteOffsetRef, skillOffsetRef } = useDarkMode();
+    const { setWhite, projectOffsetRef, skillOffsetRef } = useDarkMode();
     const skillRef = useRef(null);
     const horizItemRef = useRef([]);
 
@@ -17,8 +17,8 @@ const Skill = () => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
             const skillRefOffsetTop = skillOffsetRef.current.offsetTop - gap;
-            const siteRefOffsetTop = siteOffsetRef.current.offsetTop - gap;
-            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < siteRefOffsetTop;
+            const projectRefOffsetTop = projectOffsetRef.current.offsetTop - gap;
+            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < projectRefOffsetTop;
 
             setWhite((prevWhite) => {
                 if (prevWhite === isWhite) {
@@ -33,7 +33,7 @@ const Skill = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [setWhite, skillOffsetRef, siteOffsetRef]);
+    }, [setWhite, skillOffsetRef, projectOffsetRef]);
 
     // 가로 스크롤
     useEffect(() => {
@@ -48,7 +48,7 @@ const Skill = () => {
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
-                end: () => "+=" + horizontal.offsetWidth,
+                end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
                 scrub: 1,
                 smooth: true,
@@ -64,7 +64,7 @@ const Skill = () => {
 
     return (
         <>
-            <aside className="site_offsetTop" ref={skillOffsetRef}></aside>
+            <div className="site_offsetTop" ref={skillOffsetRef} />
             <section id="skill" className="horizontal" ref={skillRef} aria-label="Horizontal Scroll Section">
                 <h2 className="blind">스킬</h2>
                 <div className="container">

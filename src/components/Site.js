@@ -2,16 +2,12 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteText } from "../constants/index";
-import { useDarkMode } from "../context/DarkModeContext";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// react icons
-import { PiArrowDownThin } from "react-icons/pi";
-
 const Site = () => {
-    const { siteRef } = useDarkMode();
+    const siteRef = useRef(null);
     const sectionRef = useRef([]);
 
     // 가로스크롤
@@ -27,7 +23,7 @@ const Site = () => {
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
-                end: () => "+=" + horizontal.offsetWidth,
+                end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
                 scrub: 1,
                 smooth: true,
@@ -39,7 +35,7 @@ const Site = () => {
         return () => {
             scrollTween.kill();
         };
-    }, [siteRef]);
+    }, []);
 
     return (
         <section id="site" ref={siteRef}>
@@ -49,13 +45,9 @@ const Site = () => {
                     <div className="site">
                         <div className="site_items">
                             <div className="site_item_box intro">
-                                <p className="site_intro_title site_intro_title1">welcome to</p>
-                                <p className="site_intro_title site_intro_title2">my projects</p>
+                                <p className="site_intro_title site_intro_title1">about my</p>
+                                <p className="site_intro_title site_intro_title2">web site</p>
                                 <p className="site_intro_title site_intro_title3">
-                                    scroll
-                                    <span className="scroll_arrow">
-                                        <PiArrowDownThin />
-                                    </span>
                                 </p>
                             </div>
                             {siteText.map((site, i) => (
@@ -65,8 +57,8 @@ const Site = () => {
                                             src={`/images/${site.img}`}
                                             alt={site.title}
                                             style={{ objectFit: "cover" }}
-                                            width={200}
-                                            height={200}
+                                            width={500}
+                                            height={500}
                                         />
                                     </div>
                                     <div className="site_text_box">

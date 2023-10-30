@@ -33,8 +33,8 @@ const Home = () => {
 
                     return currentPercentage;
                 });
-            }, 40);
-        }, 300);
+            }, 20);
+        }, 200);
 
         return () => {
             clearTimeout(loadingTimer);

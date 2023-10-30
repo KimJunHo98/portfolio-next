@@ -9,7 +9,11 @@ export const headerNav = [
     },
     {
         title: "site",
-        url: "#site_parallax",
+        url: "#site",
+    },
+    {
+        title: "project",
+        url: "#project",
     },
     {
         title: "contact",
@@ -65,6 +69,70 @@ export const skillText = [
 ];
 
 export const siteText = [
+    {
+        num: "01",
+        title: "glife",
+        join: "개인 프로젝트",
+        img: "site1-pc.jpg",
+        skill: "html, css, jQuery, js",
+        desc: "경기생활문화센터 사이트를 리뉴얼한 사이트입니다. 반응형, 웹표준, 웹접근성을 고려하여 제작했으며 쿠키 데이터 사용한 드래그 팝업, 페이드인아웃 배너, 각 섹션마다 스크롤 애니메이션을 구현했습니다.",
+        git: "https://github.com/KimJunHo98/project1",
+        view: "https://kimjunho98.github.io/project1/",
+    },
+    {
+        num: "02",
+        title: "bbatsue",
+        join: "팀 프로젝트",
+        img: "site2-pc.jpg",
+        skill: "html, scss, js, bootstrap",
+        desc: "첫 팀프로젝트로 제작한 베이커리 사이트입니다. bootstrap의 그리드를 활용하여 제작하였고 영양정보 API를 사용했으며, 스크롤 애니메이션, 탭메뉴를 구현했습니다. gitflow 방식으로 브랜치를 나눠서 협업하고 vercel로 배포했습니다,",
+        git: "https://github.com/hejo47/bbatsueWeb",
+        view: "https://bbatsue-web.vercel.app/",
+    },
+    {
+        num: "03",
+        title: "anbd",
+        join: "팀 프로젝트",
+        img: "site3-pc.jpg",
+        skill: "react.js, js, scss, node.js, sqlLite",
+        desc: "중고거래 사이트를 벤치마킹하여 심플하게 제작한 웹&앱입니다. 검색기능, 상품등록, 결제기능, swiper를 사용한 슬라이드 배너를 구현했고 gitflow 방식으로 브랜치를 나눠서 협업했습니다. PWA 앱으로 제작하였으며, vercel로 배포를 했습니다.",
+        git: "https://github.com/2ANBD/ANBD",
+        view: "https://anbd.vercel.app/",
+    },
+    {
+        num: "04",
+        title: "post",
+        join: "개인 프로젝트",
+        img: "site4-pc.jpg",
+        skill: "html, css, js, react.js, firebase",
+        desc: "트위터를 벤치마킹하여 심플하게 제작한 사이트입니다. firebase를 사용한 로그인&로그아웃, 회원가입, 실시간 업로드, 삭제, 수정기능을 리액트의 훅을 사용하여 구현했습니다.",
+        git: "https://github.com/KimJunHo98/twit",
+        view: "https://kimjunho98.github.io/twit/",
+    },
+    {
+        num: "05",
+        title: "movieflix",
+        join: "개인 프로젝트",
+        img: "site5-pc.png",
+        skill: "html, css, js, react.js",
+        desc: "open API를 사용한 영화 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 vercel로 배포했습니다.",
+        git: "https://github.com/KimJunHo98/movie-app",
+        view: "movie-app-liart-chi.vercel.app",
+        name: "박준* 포트폴리오",
+    },
+    {
+        num: "06",
+        title: "portfolio-react",
+        join: "개인 프로젝트",
+        img: "site6-pc.png",
+        skill: "html, scss, js, react.js",
+        desc: "리액트를 사용한 포트폴리오 사이트입니다. gsap을 사용한 가로스크롤, 스무스 스크롤, 마우스 포인터 이벤를 구현했고, 페이지네이션, 스크롤 진행바, aos를 사용한 애니메이션을 구현했으며 vercel로 배포했습니다.",
+        git: "https://github.com/KimJunHo98/Portfolio-react",
+        view: "portfolio-site-kimjunho98.vercel.app",
+    },
+];
+
+export const projectText = [
     {
         num: "01",
         title: "glife",
