@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { useDarkMode } from '../context/DarkModeContext';
+import { useDarkMode } from "../context/DarkModeContext";
 import { headerNav } from "../constants/index";
-
 
 const Header = () => {
     const { white } = useDarkMode();
     const [active, setActive] = useState(false);
 
     const hadlekNavMobileClick = () => {
+        setActive((prev) => !prev);
+    };
+    const hadlekMobileMenuClick = () => {
         setActive((prev) => !prev);
     };
 
@@ -45,7 +47,9 @@ const Header = () => {
                             <ul className="mobile_menu" aria-label="모바일메뉴">
                                 {headerNav.map((nav) => (
                                     <li key={nav.title} className="menu_item">
-                                        <AnchorLink href={nav.url}>{nav.title}</AnchorLink>
+                                        <AnchorLink href={nav.url} onClick={hadlekMobileMenuClick}>
+                                            {nav.title}
+                                        </AnchorLink>
                                     </li>
                                 ))}
                             </ul>
