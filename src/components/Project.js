@@ -7,9 +7,6 @@ import { useDarkMode } from "../context/DarkModeContext";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// react icons
-import { PiArrowDownThin } from "react-icons/pi";
-
 const Project = () => {
     const { projectOffsetRef } = useDarkMode();
     const projectRef = useRef(null);
@@ -23,7 +20,7 @@ const Project = () => {
         const section = sectionRef.current;
 
         let scrollTween = gsap.to(section, {
-            xPercent: -120 * (section.length - 1),
+            xPercent: -130 * (section.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,
@@ -52,14 +49,8 @@ const Project = () => {
                         <div className="project">
                             <div className="project_items">
                                 <div className="project_item_box intro">
-                                    <p className="project_intro_title project_intro_title1">welcome to</p>
-                                    <p className="project_intro_title project_intro_title2">my projects</p>
-                                    <p className="project_intro_title project_intro_title3">
-                                        scroll
-                                        <span className="scroll_arrow">
-                                            <PiArrowDownThin />
-                                        </span>
-                                    </p>
+                                    <p className="project_intro_title project_intro_title1">about my</p>
+                                    <p className="project_intro_title project_intro_title2">projects</p>
                                 </div>
                                 {projectText.map((project, i) => (
                                     <article className={`project_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>

@@ -15,7 +15,6 @@ const Site = () => {
                         <div className="site_item_box intro">
                             <p className="site_intro_title site_intro_title1">about my</p>
                             <p className="site_intro_title site_intro_title2">web site</p>
-                            <p className="site_intro_title site_intro_title3"></p>
                         </div>
                         <div className="site_items_wrap">
                             {siteText.map((site, i) => (

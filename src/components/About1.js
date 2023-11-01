@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const About = () => {
+const About1 = () => {
     const aboutRef = useRef();
     const textRef = useRef([]);
 
@@ -90,4 +90,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default About1;

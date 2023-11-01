@@ -16,6 +16,10 @@ export const headerNav = [
         url: "#project",
     },
     {
+        title: "introduce",
+        url: "#about2",
+    },
+    {
         title: "contact",
         url: "#contact",
     },
@@ -81,7 +85,7 @@ export const siteText = [
         num: "02",
         title: "gabia",
         skill: "html5, css3, js",
-        desc: "가비아 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 li목록 중 클라우드를 클릭하면 서브페이지로 이동합니다.",
+        desc: "가비아 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 클라우드를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고만하여 제 코딩 방식으로 제작했습니다.",
         git: "https://github.com/KimJunHo98/gabia",
         view: "https://kimjunho98.github.io/gabia/",
     },
@@ -89,7 +93,7 @@ export const siteText = [
         num: "03",
         title: "netflix",
         skill: "html5, css3, js",
-        desc: "넷플릭스 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 슬라이드다운 영역, 팝업을 구현했습니다. 그대로 따라만드는 것이 아닌 페이지를 개발자모드로 확인하며 100% 타이핑을 하여 제작했습니다.",
+        desc: "넷플릭스 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 슬라이드다운 영역, 팝업을 구현했습니다. 그대로 따라만드는 것이 아닌 개발자모드로 참고만하여 제 코딩 방식으로 제작했습니다.",
         git: "https://github.com/KimJunHo98/flix",
         view: "https://kimjunho98.github.io/flix/",
     },
@@ -136,14 +140,13 @@ export const projectText = [
     },
     {
         num: "04",
-        title: "movieflix",
+        title: "moviemoa",
         join: "개인 프로젝트",
         img: "site5-pc.png",
         skill: "html5, css3, js, react.js",
         desc: "open API와 리액트를 활용하여 제작한 영화정보 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/movie-app",
         view: "movie-app-liart-chi.vercel.app",
-        name: "박준* 포트폴리오",
     },
     {
         num: "05",
@@ -157,3 +160,21 @@ export const projectText = [
     },
 ];
 
+export const aboutText = [
+    {
+        title: "title1",
+        text: "tabmenu1",
+    },
+    {
+        title: "title2",
+        text: "tabmenu2",
+    },
+    {
+        title: "title3",
+        text: "tabmenu3",
+    },
+    {
+        title: "title4",
+        text: "tabmenu4",
+    },
+];

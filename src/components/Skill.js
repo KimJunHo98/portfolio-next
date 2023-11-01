@@ -72,7 +72,7 @@ const Skill = () => {
                         <div className="skill">
                             <div className="skill_items">
                                 <div className="skill_item_box title_box">
-                                    <h3 className="skill_title">i can do these skills</h3>
+                                    <h3 className="skill_title">i can use these skills</h3>
                                 </div>
                                 {skillText.map((skill, i) => (
                                     <article className={`skill_item_box item${i + 1}`} key={i} ref={(el) => (horizItemRef.current[i] = el)}>
