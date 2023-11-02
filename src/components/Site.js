@@ -1,13 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import { siteText } from "../constants/index";
 
 const Site = () => {
-    const siteRef = useRef(null);
-    const sectionRef = useRef([]);
-
     return (
-        <section id="site" ref={siteRef}>
+        <section id="site">
             <h2 className="blind">사이트</h2>
             <div className="container">
                 <div className="inner">
@@ -18,7 +15,7 @@ const Site = () => {
                         </div>
                         <div className="site_items_wrap">
                             {siteText.map((site, i) => (
-                                <article className={`site_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>
+                                <article className={`site_item_box item${i + 1}`} key={i}>
                                     <div className="site_text_box">
                                         <h3 className="site_sub_title">
                                             <span className="site_num">{site.num}.</span>&nbsp;

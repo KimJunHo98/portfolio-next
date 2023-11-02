@@ -22,7 +22,7 @@ const About2 = () => {
             <div className="container">
                 <div className="inner">
                     <div className="about2">
-                        <h3 className="about2_title">i am kind of this person</h3>
+                        <h3 className="about2_title">i&apos;m kind of this person</h3>
                         <div className="introduce_wrap">
                             <ul className="introduce_tabmenu" role="tablist">
                                 {aboutText.map((about, i) => (

@@ -4,7 +4,7 @@ import { useDarkMode } from "../context/DarkModeContext";
 import { headerNav } from "../constants/index";
 
 const Header = () => {
-    const { white } = useDarkMode();
+    const { dark } = useDarkMode();
     const [active, setActive] = useState(false);
 
     const hadlekNavMobileClick = () => {
@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="header" role="header" className={white ? "white" : ""}>
+            <header id="header" role="header" className={dark ? "dark" : ""}>
                 <h2 className="blind">헤더</h2>
                 <div className="header_inner">
                     <div className="header">

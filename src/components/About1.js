@@ -1,27 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
 const About1 = () => {
-    const aboutRef = useRef();
     const textRef = useRef([]);
 
     useEffect(() => {
-        const aboutRefCurrent = aboutRef.current;
         const textRefCurrent = textRef.current;
 
-        const aboutObserver = new IntersectionObserver(
-            (entries) => {
-                const target = entries[0];
-
-                if (target.isIntersecting) {
-                    aboutRefCurrent.style.backgroundColor = "var(--white100)";
-                    aboutRefCurrent.style.transition = "all .5s ease-in-out";
-                } else {
-                    aboutRefCurrent.style.backgroundColor = "var(--black)";
-                    aboutRefCurrent.style.transition = "all .5s ease-in-out";
-                }
-            },
-            { threshold: 0.1 }
-        );
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((item) => {
@@ -37,18 +21,15 @@ const About1 = () => {
             { threshold: 0.5 }
         );
 
-        aboutObserver.observe(aboutRefCurrent);
         textRefCurrent.forEach((el) => observer.observe(el));
 
         return () => {
-            aboutObserver.unobserve(aboutRefCurrent);
             textRefCurrent.forEach((el) => observer.disconnect(el));
-            // 모든 요소를 해제하는 메소드 disconnect, 특정 요소를 해제하는 메소드 unobserve
         };
     }, []);
 
     return (
-        <section id="about" ref={aboutRef}>
+        <section id="about">
             <h2 className="blind">자기소개</h2>
             <div className="container">
                 <div className="inner">

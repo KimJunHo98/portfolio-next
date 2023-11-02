@@ -8,19 +8,18 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Project = () => {
-    const { projectOffsetRef } = useDarkMode();
+    const { horizonSectionRef } = useDarkMode();
     const projectRef = useRef(null);
-    const sectionRef = useRef([]);
 
     // 가로 스크롤
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const horizontal = projectRef.current;
-        const section = sectionRef.current;
+        const horizonSection = horizonSectionRef.current;
 
-        let scrollTween = gsap.to(section, {
-            xPercent: -130 * (section.length - 1),
+        let scrollTween = gsap.to(horizonSection, {
+            xPercent: -125 * (horizonSection.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,
@@ -37,11 +36,10 @@ const Project = () => {
         return () => {
             scrollTween.kill();
         };
-    }, []);
+    }, [horizonSectionRef]);
 
     return (
         <>
-            <div className="project_offsetTop" ref={projectOffsetRef} />
             <section id="project" className="horizontal" ref={projectRef} aria-label="Horizontal Scroll Section">
                 <h2 className="blind">프로젝트</h2>
                 <div className="container">
@@ -53,7 +51,7 @@ const Project = () => {
                                     <p className="project_intro_title project_intro_title2">projects</p>
                                 </div>
                                 {projectText.map((project, i) => (
-                                    <article className={`project_item_box item${i + 1}`} key={i} ref={(el) => (sectionRef.current[i] = el)}>
+                                    <article className={`project_item_box item${i + 1}`} key={i} ref={(el) => (horizonSectionRef.current[i] = el)}>
                                         <div className="project_thumb_img">
                                             <Image
                                                 src={`/images/${project.img}`}

@@ -196,12 +196,13 @@
         }
     }
 
-    &.white {
+    &.dark {
         .header_inner {
             .header {
                 .header_logo {
                     border: 2px solid var(--black);
-                    background-color: transparent;
+                    background-color: rgba(230, 230, 230, .5);
+                    backdrop-filter: blur(15px);
 
                     a {
                         color: var(--black);
@@ -209,7 +210,8 @@
                 }
                 .header_nav_pc {
                     border: 2px solid var(--black);
-                    background-color: transparent;
+                    background-color: rgba(230, 230, 230, .5);
+                    backdrop-filter: blur(15px);
 
                     .pc_menu {
                         .menu_item {
@@ -225,7 +227,8 @@
                 }
                 .mobile_menu_btn {
                     border: 2px solid var(--black);
-                    background-color: transparent;
+                    background-color: rgba(230, 230, 230, .5);
+                    backdrop-filter: blur(15px);
 
                     .btn_bar {
                         background-color: var(--black);

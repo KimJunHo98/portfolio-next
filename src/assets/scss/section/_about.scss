@@ -44,7 +44,7 @@
                 font-size: 13rem;
                 font-weight: 800;
                 letter-spacing: -3px;
-                color: var(--black);
+                color: var(--white);
                 
                 & span {
                     display: block;
@@ -76,7 +76,7 @@
                     font-family: var(--mainKor-font);
                     font-size: 1.8rem;
                     font-weight: 400;
-                    color: var(--black100);
+                    color: var(--white);
 
                     @include mobile {
                         font-size: 1.6rem;

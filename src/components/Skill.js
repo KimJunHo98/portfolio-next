@@ -1,39 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { skillText } from "../constants/index";
-import { useDarkMode } from "../context/DarkModeContext";
+import { useDarkMode, useScrollListener } from "../context/DarkModeContext";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Skill = () => {
-    const { setWhite, projectOffsetRef, skillOffsetRef } = useDarkMode();
+    const { setDark, projectOffsetRef, skillOffsetRef } = useDarkMode();
     const skillRef = useRef(null);
     const horizItemRef = useRef([]);
 
     // 스크롤 시 색상 변경(context에 값 넘겨줌)
-    useEffect(() => {
-        const gap = 50;
-
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-            const skillRefOffsetTop = skillOffsetRef.current.offsetTop - gap;
-            const projectRefOffsetTop = projectOffsetRef.current.offsetTop - gap;
-            const isWhite = scrollTop >= skillRefOffsetTop && scrollTop < projectRefOffsetTop;
-
-            setWhite((prevWhite) => {
-                if (prevWhite === isWhite) {
-                    return prevWhite;
-                }
-                return isWhite;
-            });
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [setWhite, skillOffsetRef, projectOffsetRef]);
+    useScrollListener(setDark, skillOffsetRef, projectOffsetRef);
 
     // 가로 스크롤
     useEffect(() => {
