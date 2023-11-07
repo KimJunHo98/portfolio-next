@@ -27,7 +27,7 @@ const About2 = () => {
                             <ul className="introduce_tabmenu" role="tablist">
                                 {aboutText.map((about, i) => (
                                     <Fragment key={i}>
-                                        <li role="presentation">
+                                        <li className="tabmenu_list" role="presentation">
                                             <Link
                                                 href="#"
                                                 onClick={(e) => {
@@ -35,7 +35,7 @@ const About2 = () => {
                                                     handleTabMenuBtnClick(i);
                                                 }}
                                                 onKeyDown={(e) => handleTabMenuBtnKeyDown(e, i)}
-                                                className={`introduce_btn ${activeTab === i ? "active" : ""}`}
+                                                className={`tabmenu_btn ${activeTab === i ? "active" : ""}`}
                                                 role="tab"
                                                 aria-selected={activeTab === i}
                                             >
