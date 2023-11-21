@@ -53,7 +53,8 @@ const About2 = () => {
                                             aria-hidden={activeTab !== i}
                                             className={`introduce_text ${activeTab === i ? "active" : ""}`}
                                         >
-                                            {about.text}
+                                            {about.text}<br />
+                                            <span className="introduce_desc">{about.desc}</span>
                                         </li>
                                     </Fragment>
                                 ))}
