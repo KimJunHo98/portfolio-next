@@ -10,7 +10,7 @@
 사이트 제작을 해봄으로써 흥미를 느끼고 더 깊게 공부할 수 있게 하기 위한 포트폴리오 사이트입니다.
 
 ## 완성작 보기 
-미리보기 : 
+미리보기 : https://portfolio-next-nine-coral.vercel.app/
 
 ## 사용 스택
 - next(https://nextjs.org/) 를 사용하여 사이트를 번들링하고 관리합니다.
