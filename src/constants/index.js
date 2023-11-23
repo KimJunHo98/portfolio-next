@@ -85,7 +85,7 @@ export const siteText = [
         num: "02",
         title: "gabia",
         skill: "html5, css3, js",
-        desc: "가비아 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 클라우드를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고만하여 제 코딩 방식으로 제작했습니다.",
+        desc: "가비아 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 클라우드를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다.",
         git: "https://github.com/KimJunHo98/gabia",
         view: "https://kimjunho98.github.io/gabia/",
     },
@@ -93,7 +93,7 @@ export const siteText = [
         num: "03",
         title: "netflix",
         skill: "html5, css3, js",
-        desc: "넷플릭스 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 슬라이드다운 영역, 팝업을 구현했습니다. 그대로 따라만드는 것이 아닌 개발자모드로 참고만하여 제 코딩 방식으로 제작했습니다.",
+        desc: "넷플릭스 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 슬라이드다운 영역, 팝업을 구현했습니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다.",
         git: "https://github.com/KimJunHo98/flix",
         view: "https://kimjunho98.github.io/flix/",
     },
@@ -158,11 +158,21 @@ export const projectText = [
         git: "https://github.com/KimJunHo98/Portfolio-react",
         view: "portfolio-site-kimjunho98.vercel.app",
     },
+    {
+        num: "06",
+        title: "mytube",
+        join: "개인 프로젝트",
+        img: "site6-pc.png",
+        skill: "html5, scss, js, react.js",
+        desc: "리액트를 사용한 유튜브 사이트입니다. async/await, axios를 사용하여 유튜브 api의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. 반응형으로 제작하였으며 vercel로 배포했습니다.",
+        git: "https://github.com/KimJunHo98/mytube",
+        view: "https://mytube-gamma.vercel.app/",
+    },
 ];
 
 export const aboutText = [
     {
-        title: "defiant",
+        title: "challenging",
         text: `"새로운 도전을 마다하지 않습니다."`,
         desc: `대학 졸업 후 진로에 대한 고민이 많았고, 제가 즐기면서 일을 할 수 있는 분야를 찾고 싶었습니다. 
         그렇게 코딩에 관심을 가지게 되었고 웹퍼블리셔 & 프론트엔드에 대한 공부를 하게 되었습니다. 

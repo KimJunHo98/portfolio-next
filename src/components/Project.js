@@ -19,7 +19,7 @@ const Project = () => {
         const horizonSection = horizonSectionRef.current;
 
         let scrollTween = gsap.to(horizonSection, {
-            xPercent: -125 * (horizonSection.length - 1),
+            xPercent: -120 * (horizonSection.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,
