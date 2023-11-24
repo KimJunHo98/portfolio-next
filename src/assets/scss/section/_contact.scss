@@ -43,6 +43,10 @@
             font-family: var(--subEng-font);
             font-weight: 600;
             color: var(--black);
+
+            @include s_mobile {
+                font-size: 8vw;
+            };
         }
         .contact_me {
             margin-top: 150px;
