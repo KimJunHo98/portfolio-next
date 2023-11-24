@@ -51,9 +51,17 @@ const About2 = () => {
                                         <li
                                             role="tabpanel"
                                             aria-hidden={activeTab !== i}
+                                            className={`introduce_text title ${activeTab === i ? "active" : ""}`}
+                                        >
+                                            {about.title}
+                                        </li>
+                                        <li
+                                            role="tabpanel"
+                                            aria-hidden={activeTab !== i}
                                             className={`introduce_text ${activeTab === i ? "active" : ""}`}
                                         >
-                                            {about.text}<br />
+                                            {about.text}
+                                            <br />
                                             <span className="introduce_desc">{about.desc}</span>
                                         </li>
                                     </Fragment>

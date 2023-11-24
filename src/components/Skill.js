@@ -21,7 +21,7 @@ const Skill = () => {
         const section = horizItemRef.current;
 
         let scrollTween = gsap.to(section, {
-            xPercent: -140 * (section.length - 1),
+            xPercent: -150 * (section.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: horizontal,

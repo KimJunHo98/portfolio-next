@@ -3,11 +3,11 @@
     height: 100vh;
 
     @include desktop {
-        .container { 
-            width: 100%; 
-            max-width: 100%; 
+        .container {
+            width: 100%;
+            max-width: 100%;
         }
-    };
+    }
     @include tablet {
         .inner {
             padding: 0 15px;
@@ -46,7 +46,7 @@
                 &.intro {
                     justify-content: center;
                     text-transform: uppercase;
-        
+
                     .project_intro_title {
                         padding-right: 5%;
                         line-height: 1;
@@ -76,7 +76,7 @@
                             top: 20%;
                             left: 30%;
                             z-index: -1;
-                            
+
                             img {
                                 height: 100%;
                             }
@@ -89,18 +89,26 @@
                             justify-content: flex-start;
                             padding: 80px;
 
+                            @include mobile {
+                                padding: 20px;
+                            }
+                            @include s_mobile {
+                                padding: 10px;
+                            }
+
                             .project_sub_title {
                                 font-size: 10rem;
                                 font-weight: 600;
                                 font-family: var(--mainEng-font);
                                 letter-spacing: -8px;
                                 color: var(--black);
-                                
+
                                 @include mobile {
                                     font-size: 6rem;
                                 }
                             }
-                            .project_join, .project_skill {
+                            .project_join,
+                            .project_skill {
                                 display: inline-block;
                                 margin-right: 10px;
                                 padding: 5px 7px;

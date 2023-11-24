@@ -4,6 +4,32 @@
     padding: 300px 0 100px;
     background-color: var(--subBg-color);
 
+    @include desktop {
+        .container { 
+            width: 100%; 
+            max-width: 100%; 
+        }
+    };
+    @include tablet {
+        .inner {
+            padding: 0 15px;
+        }
+
+        padding-top: 270px;
+    }
+    @include mobile {
+        .inner {
+            padding: 0 15px;
+        }
+
+        padding-top: 240px;
+    }
+    @include s_mobile {
+        .inner {
+            padding: 0 12px;
+        }
+    }
+
     .contact {
         width: 100%;
         height: 100%;

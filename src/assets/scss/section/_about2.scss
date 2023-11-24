@@ -6,6 +6,28 @@
     border-top: 1px solid #ccc;
     background-color: var(--subBg-color);
 
+    @include desktop {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    @include tablet {
+        .inner {
+            padding: 0 15px;
+        }
+    }
+    @include mobile {
+        .inner {
+            padding: 0 15px;
+        }
+    }
+    @include s_mobile {
+        .inner {
+            padding: 0 12px;
+        }
+    }
+
     .about2 {
         width: 100%;
         height: 100%;
@@ -28,14 +50,45 @@
             justify-content: space-between;
             margin-top: 200px;
 
+            @include tablet {
+                flex-direction: column;
+            }
+            @include mobile {
+                flex-direction: column;
+            }
+
             .introduce_tabmenu {
                 width: 40%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
 
+                @include tablet {
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 0 10px;
+                }
+                @include mobile {
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 0 10px;
+                }
+                @include s_mobile {
+                    gap: 0;
+                }
+
                 .tabmenu_list {
                     padding: 10px 0;
+
+                    @include s_mobile {
+                        width: 50%;
+
+                        &:nth-child(2n) .tabmenu_btn {
+                            border-left: 0;
+                        }
+                    }
 
                     .tabmenu_btn {
                         width: 100%;
@@ -44,13 +97,26 @@
                         position: relative;
                         padding: 12px 0;
                         border: 2px solid var(--black);
-                        border-radius: 30px;
                         text-align: center;
                         text-transform: uppercase;
-                        transition: all .3s ease-in;
+                        transition: all 0.3s ease-in;
                         font-family: var(--mainEng-font);
                         font-size: 3rem;
                         color: var(--black);
+
+                        @include tablet {
+                            min-width: 100%;
+                            padding: 12px 10px;
+                            font-size: 2rem;
+                        }
+                        @include mobile {
+                            min-width: 100%;
+                            padding: 12px 10px;
+                            font-size: 1.6rem;
+                        }
+                        @include s_mobile {
+                            padding: 12px 0;
+                        }
 
                         &.active {
                             color: var(--white);
@@ -61,13 +127,29 @@
             }
             .introduce_text_box {
                 width: 50%;
-                
+
+                @include tablet {
+                    width: 100%;
+                    padding-top: 50px;
+                }
+                @include mobile {
+                    width: 100%;
+                    padding-top: 50px;
+                }
+
                 .introduce_text {
                     display: none;
                     font-weight: 800;
                     font-size: 1.8rem;
+                    font-family: var(--mainKor-font);
                     color: var(--black);
 
+                    &.title {
+                        padding-bottom: 10px;
+                        text-transform: uppercase;
+                        font-size: 2rem;
+                        font-family: var(--mainEng-font);
+                    }
                     &.active {
                         display: block;
                     }
@@ -77,6 +159,11 @@
                         padding-top: 30px;
                         text-align: justify;
                         font-weight: 400;
+                        font-family: var(--mainKor-font);
+
+                        @include mobile {
+                            font-size: 1.6rem;
+                        }
                     }
                 }
             }
