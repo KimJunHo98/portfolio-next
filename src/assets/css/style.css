@@ -73,7 +73,7 @@ body {
 /* 스크롤 초기화 */
 body {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
