@@ -8,15 +8,18 @@
 }
 
 /* 스크롤 초기화 */
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
 body {
+    overflow-x: hidden;
+
     &::-webkit-scrollbar {
         display: none !important;
-        // width: 0px;
     }
+}
+
+/* 모바일 수평 스크롤 금지 */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container {

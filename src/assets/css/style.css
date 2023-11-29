@@ -71,13 +71,17 @@ body {
 }
 
 /* 스크롤 초기화 */
-html, body {
-  width: 100%;
+body {
   overflow-x: hidden;
 }
-
 body::-webkit-scrollbar {
   display: none !important;
+}
+
+/* 모바일 수평 스크롤 금지 */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
