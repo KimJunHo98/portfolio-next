@@ -74,13 +74,13 @@ body {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch;
 }
 body::-webkit-scrollbar {
   display: none;
   width: 0;
   height: 0;
   background: transparent;
-  -webkit-appearance: none;
 }
 
 .container {
