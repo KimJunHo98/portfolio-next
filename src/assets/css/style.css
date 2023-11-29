@@ -72,7 +72,9 @@ body {
 
 /* 스크롤 초기화 */
 body {
-  overflow-x: hidden;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
@@ -92,25 +94,40 @@ html {
   font-size: 62.5%; /* 1rem = 10px */
 }
 
-body, input, textarea, select, button, table {
+body,
+input,
+textarea,
+select,
+button,
+table {
   font-family: var(--mainEng-font), var(--mainKor-font), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
   color: #222;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-size: 1.6rem;
 }
 
-ul, li, ol {
+ul,
+li,
+ol {
   list-style: none;
 }
 
-em, address {
+em,
+address {
   font-style: normal;
 }
 
@@ -118,11 +135,13 @@ button {
   border: 0;
 }
 
-img, fieldset {
+img,
+fieldset {
   border: 0 none;
 }
 
-img, video {
+img,
+video {
   width: 100%;
 }
 
@@ -3198,6 +3217,11 @@ img, video {
   font-family: var(--subEng-font);
   font-weight: 600;
   color: var(--black);
+}
+@media all and (max-width: 480px) {
+  #contact .contact .contact_text li {
+    font-size: 8vw;
+  }
 }
 #contact .contact .contact_me {
   margin-top: 150px;
