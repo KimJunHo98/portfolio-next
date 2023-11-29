@@ -39,7 +39,7 @@ const Project = () => {
     }, [horizonSectionRef]);
 
     return (
-        <>
+        <div id="project_wrap">
             <section id="project" className="horizontal" ref={projectRef} aria-label="Horizontal Scroll Section">
                 <h2 className="blind">프로젝트</h2>
                 <div className="container">
@@ -96,7 +96,7 @@ const Project = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 
