@@ -8,12 +8,15 @@
 }
 
 /* 스크롤 초기화 */
-body {
+html, body {
     width: 100%;
     overflow-x: hidden;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+}
+body {
+    &::-webkit-scrollbar {
+        display: none !important;
+        // width: 0px;
+    }
 }
 
 .container {
