@@ -9,8 +9,15 @@
 
 /* 스크롤 초기화 */
 body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    
     &::-webkit-scrollbar {
-        display: none !important;
+        display: none;
+        width: 0; 
+        height: 0;
+        background: transparent;
+        -webkit-appearance: none;
     }
 }
 
