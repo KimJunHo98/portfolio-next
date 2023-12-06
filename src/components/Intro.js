@@ -9,8 +9,8 @@ const Intro = () => {
     const maskRef = useRef(null);
 
     const textArr1 = useMemo(() => "This is Junho Kim's portfolio site made with Next.js".split(" "), []);
-    const textArr2 = useMemo(() => "Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down".split(" "), []);
-    const textArr3 = useMemo(() => "frontend developer frontend developer frontend developer".split(" "), []);
+    const textArr2 = useMemo(() => "Scroll Down Scroll Down".split(" "), []);
+    const textArr3 = useMemo(() => "web publisher & frontend developer &".split(" "), []);
 
     // 텍스트 마우스 오버
     useEffect(() => {

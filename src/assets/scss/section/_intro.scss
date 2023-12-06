@@ -134,17 +134,17 @@
 
                 &:nth-child(1) {
                     transform: rotate(-3deg);
-                    background-color: var(--white500);
+                    background-color: var(--white);
                 }
                 &:nth-child(2) {
                     justify-content: flex-end;
                     transform: rotate(2deg);
-                    background-color: #773ee2;
+                    background-color: var(--white200);
                 }
                 &:nth-child(3) {
                     display: none;
                     transform: rotate(-10deg);
-                    background-color: #e4ee57;
+                    background-color: var(--white500);
 
                     @include mobile {
                         display: block;
