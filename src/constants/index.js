@@ -105,6 +105,14 @@ export const siteText = [
         git: "https://github.com/KimJunHo98/todolist",
         view: "https://kimjunho98.github.io/todolist/",
     },
+    {
+        num: "05",
+        title: "Draw Board",
+        skill: "html5, css3, js",
+        desc: "그림판 사이트입니다. canvas를 사용하여 그림 그리기, 텍스트 삽입, 이미지 삽입, 초기화, 지우기, 저장, 토글 메뉴 등의 기능을 구현했습니다.",
+        git: "https://github.com/KimJunHo98/draw-board",
+        view: "https://draw-board.vercel.app/",
+    },
 ];
 
 export const projectText = [
