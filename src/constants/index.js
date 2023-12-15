@@ -154,7 +154,7 @@ export const projectText = [
         skill: "html5, css3, js, react.js",
         desc: "open API와 리액트를 활용하여 제작한 영화정보 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 flex를 사용하여 반응형으로 제작, vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/movie-app",
-        view: "movie-app-liart-chi.vercel.app",
+        view: "https://movie-app-liart-chi.vercel.app/",
     },
     {
         num: "05",
@@ -164,7 +164,7 @@ export const projectText = [
         skill: "html5, scss, js, react.js",
         desc: "리액트를 사용한 포트폴리오 사이트입니다. gsap을 사용한 가로스크롤, 스무스 스크롤, 마우스 포인터 이벤를 구현했고, 페이지네이션, 스크롤 진행바, aos를 사용한 애니메이션을 구현했으며 vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/Portfolio-react",
-        view: "portfolio-site-kimjunho98.vercel.app",
+        view: "https://portfolio-site-three-gules.vercel.app/",
     },
     {
         num: "06",
