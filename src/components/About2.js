@@ -27,7 +27,7 @@ const About2 = () => {
                             <ul className="introduce_tabmenu" role="tablist">
                                 {aboutText.map((about, i) => (
                                     <Fragment key={i}>
-                                        <li className="tabmenu_list" role="presentation">
+                                        <li className="tabmenu_list">
                                             <Link
                                                 href="#"
                                                 onClick={(e) => {

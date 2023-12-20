@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useDarkMode } from "../context/DarkModeContext";
 import { headerNav } from "../constants/index";
@@ -6,6 +6,31 @@ import { headerNav } from "../constants/index";
 const Header = () => {
     const { dark } = useDarkMode();
     const [active, setActive] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    const headerRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const headerHeight = headerRef.current.offsetHeight;
+            const scrollThreshold = 50;
+
+            if (currentScrollPos > prevScrollPos && currentScrollPos > headerHeight + scrollThreshold) {
+                setIsHeaderVisible(false);
+            } else if (currentScrollPos < prevScrollPos || currentScrollPos <= headerHeight) {
+                setIsHeaderVisible(true);
+            }
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [prevScrollPos]);
 
     const hadlekNavMobileClick = () => {
         setActive((prev) => !prev);
@@ -16,7 +41,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="header" role="header" className={dark ? "dark" : ""}>
+            <header id="header" ref={headerRef} role="header" className={`${isHeaderVisible ? "" : "unvisible"} ${dark ? "dark" : ""}`}>
                 <h2 className="blind">헤더</h2>
                 <div className="header_inner">
                     <div className="header">

@@ -2,6 +2,11 @@
     width: 100%;
     @include position-fixed;
     z-index: 10000;
+    transition: all .2s ease-in;
+
+    &.unvisible {
+        top: -92px;
+    }
     
     .header_inner {
         .header {

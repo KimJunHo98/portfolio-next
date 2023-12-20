@@ -63,11 +63,13 @@ const Project = () => {
                                         </div>
                                         <div className="project_text_box">
                                             <h3 className="project_sub_title">{project.title}</h3>
-                                            <ul>
-                                                <li className="project_join">{project.join}</li>
-                                                <li className="project_skill">{project.skill}</li>
-                                            </ul>
-                                            <p className="project_desc">{project.desc}</p>
+                                            <div className="project_text_items">
+                                                <ul className="top_item">
+                                                    <li className="project_join">{project.join}</li>
+                                                    <li className="project_skill">{project.skill}</li>
+                                                </ul>
+                                                <p className="bottom_item">{project.desc}</p>
+                                            </div>
                                             <div className="project_link_box">
                                                 <Link
                                                     href={project.git}

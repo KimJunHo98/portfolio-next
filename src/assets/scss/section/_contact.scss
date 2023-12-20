@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     padding: 300px 0 100px;
+    border-top: 1px solid #ccc;
     background-color: var(--subBg-color);
 
     @include desktop {
