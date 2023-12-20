@@ -62,7 +62,7 @@ const Project = () => {
                                             />
                                         </div>
                                         <div className="project_text_box">
-                                            <h3 className="project_sub_title">{project.title}</h3>
+                                            <h3 className="project_sub_title">{i + 1}. {project.title}</h3>
                                             <div className="project_text_items">
                                                 <ul className="top_item">
                                                     <li className="project_join">{project.join}</li>
