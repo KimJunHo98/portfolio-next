@@ -120,9 +120,11 @@
                             padding: 12px 0;
                         }
 
-                        &.active {
-                            color: var(--white);
-                            background-color: var(--black);
+                        @for $i from 1 through 4 {
+                            &.active#{$i} {
+                                background-color: var(--white#{$i}00);
+                                color: var(--white);
+                            }
                         }
                     }
                 }

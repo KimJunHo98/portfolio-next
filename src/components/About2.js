@@ -35,7 +35,7 @@ const About2 = () => {
                                                     handleTabMenuBtnClick(i);
                                                 }}
                                                 onKeyDown={(e) => handleTabMenuBtnKeyDown(e, i)}
-                                                className={`tabmenu_btn ${activeTab === i ? "active" : ""}`}
+                                                className={`tabmenu_btn ${activeTab === i ? `active${i + 1}` : ""}`}
                                                 role="tab"
                                                 aria-selected={activeTab === i}
                                             >
