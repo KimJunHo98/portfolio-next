@@ -32,7 +32,7 @@ export const skillText = [
     },
     {
         name: "scss",
-        desc: "css 전처리기를 사용한 네스팅, 믹스인, 상위 선택자, 변수를 사용하여 스타일을 지정할 수 있습니다.",
+        desc: "css 전처리기를 사용한 nesting, mixin, for 반목문, 변수 등을 사용하여 스타일을 지정할 수 있습니다.",
     },
     {
         name: "javascript",
@@ -44,11 +44,7 @@ export const skillText = [
     },
     {
         name: "react.js",
-        desc: "함수형 컴포넌트를 사용하여 html파일을 jsx문법으로 변환하여 작성할 수 있으며 컴포넌트 재사용, 리액트 훅사용, 리액트 라우터, 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.",
-    },
-    {
-        name: "next.js",
-        desc: "SSR과 SEO대응이 필요한 경우 넥스트로 변환할 수 있고 리액트와 동일하게 useState, useEffect와 같은 훅을 사용할 수 있으며 부족한 부분은 지속적으로 학습하여 프로젝트를 성공적으로 마칠 수 있도록 할 것 입니다.",
+        desc: "함수형 컴포넌트를 사용하여 html파일을 jsx문법으로 변환하여 작성할 수 있으며 컴포넌트 재사용, useEffect, useState, useContext 등의 훅 사용과 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.",
     },
     {
         name: "node.js",
