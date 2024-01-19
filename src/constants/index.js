@@ -44,7 +44,7 @@ export const skillText = [
     },
     {
         name: "react.js",
-        desc: "함수형 컴포넌트를 사용하여 html파일을 jsx문법으로 변환하여 작성할 수 있으며 styled-components, 컴포넌트 재사용, useEffect, useState, useContext 등의 훅 사용과 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.",
+        desc: "함수형 컴포넌트를 사용하여 html파일을 jsx문법으로 변환하여 작성할 수 있으며 styled-components, 컴포넌트 재사용, useEffect, useState, React Context AP 등의 훅 사용과 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.",
     },
     {
         name: "node.js",
