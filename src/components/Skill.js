@@ -53,10 +53,10 @@ const Skill = () => {
                                     <h3 className="skill_title">i can use these skills</h3>
                                 </div>
                                 {skillText.map((skill, i) => (
-                                    <article className={`skill_item_box item${i + 1}`} key={i} ref={(el) => (horizItemRef.current[i] = el)}>
+                                    <div className={`skill_item_box item${i + 1}`} key={i} ref={(el) => (horizItemRef.current[i] = el)}>
                                         <h4 className="skill_name">{skill.name}</h4>
                                         <p className="skill_desc">{skill.desc}</p>
-                                    </article>
+                                    </div>
                                 ))}
                             </div>
                         </div>

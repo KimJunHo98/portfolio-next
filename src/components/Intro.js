@@ -5,9 +5,9 @@ const Intro = () => {
     const secondParaRef = useRef(null);
     const thirdParaRef = useRef(null);
 
-    const textArr1 = useMemo(() => "This is Junho Kim's portfolio site made with Next.js".split(" "), []);
-    const textArr2 = useMemo(() => "web publisher & frontend developer & web publisher & frontend developer &".split(" "), []);
-    const textArr3 = useMemo(() => "Scroll Down Scroll Down Scroll Down Scroll Down".split(" "), []);
+    const textArr1 = useMemo(() => "This is Junho Kim's portfolio site made with Next.js This is Junho Kim's portfolio site made with Next.js".split(" "), []);
+    const textArr2 = useMemo(() => "web publisher & frontend developer & web publisher & frontend developer & web publisher & frontend developer &".split(" "), []);
+    const textArr3 = useMemo(() => "Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down".split(" "), []);
 
     // 무한 마퀴텍스트
     useEffect(() => {
