@@ -60,6 +60,10 @@
                             letter-spacing: -1px;
                             text-transform: uppercase;
                             color: var(--white);
+
+                            @include s_mobile {
+                                padding-right: 15%;
+                            }
                         }
                     }
 
@@ -157,6 +161,7 @@
 
                                     .top_item {
                                         .project_join,
+                                        .project_contribution,
                                         .project_skill {
                                             display: inline-block;
                                             margin: 0 5px 5px 0;

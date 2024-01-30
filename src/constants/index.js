@@ -28,7 +28,7 @@ export const headerNav = [
 export const skillText = [
     {
         name: "html & css",
-        desc: "시멘틱 태그 사용, 웹표준, 웹접근성을 준수하고 디바이스에 따른 플렉스와 그리드를 사용한 반응형 페이지 제작과 그에 맞는 스타일 지정 및 애니메이션을 사용할 수 있습니다. 또한 부트스트랩, 앤트디자인 등의 그리드 템플릿을 사용할 수 있습니다.",
+        desc: "의미 있는 시멘틱 태그 사용, 웹표준, 웹접근성을 준수하려고 노력하며 디바이스에 따른 플렉스와 그리드를 사용한 반응형 페이지 제작과 크로스브라우징에 대한 스타일 지정 및 애니메이션을 사용할 수 있습니다. 또한 부트스트랩, 앤트디자인 등의 그리드 템플릿을 사용할 수 있습니다.",
     },
     {
         name: "scss",
@@ -36,19 +36,24 @@ export const skillText = [
     },
     {
         name: "javascript",
-        desc: "자바스크립트의 문법과 함수를 작성하여 스크롤 이벤트, 슬라이드 배너, 마우스 이벤트 등의 인터랙티브한 페이지를 만들 수 있으며, fetch와 axios를 활용한 RESTful API를 사용할 수 있습니다.",
+        desc: `var, let, const의 차이점을 이해하고 변수지정을 하고 스크롤 이벤트, 슬라이드 배너, 마우스 이벤트 등의 인터렉티브한 페이지를 만들 수 있으며,
+            fetch와 axios를 활용한 RESTful API를 사용할 수 있습니다. 또한 라이브러리를 사용하여 더욱 인터렉티브한 사이트를 만들 수 있습니다.
+            `,
     },
     {
         name: "jquery",
-        desc: "자바스크립트로 구현한 문법을 제이쿼리로 변환하여 작성할 수 있습니다.",
+        desc: "자바스크립트와 제이쿼리의 문법 차이를 이해하고 자바스크립트로 구현한 문법을 제이쿼리로 변환하여 작성할 수 있습니다.",
     },
     {
         name: "react.js",
-        desc: "함수형 컴포넌트를 사용하여 html파일을 jsx문법으로 변환하여 작성할 수 있으며 styled-components, 컴포넌트 재사용, useEffect, useState, React Context AP 등의 훅 사용과 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.",
+        desc: `functional component로 컴포넌트를 작성하며 html파일을 jsx문법으로 변환하여 작성할 수 있습니다.
+            styled-components, 컴포넌트 재사용, useEffect, useState, Context API 등의 훅 사용과 생명주기에 대한 기본지식을 바탕으로 리액트 프로젝트를 진행할 수 있습니다.
+            현재는 상태관리를 위한 Redux도 학습중에 있습니다.
+            `,
     },
     {
         name: "node.js",
-        desc: "패키지 관리 툴을 사용해 리액트, 넥스트 앱 생성과 상황에 따라 필요한 라이브러리를 설치할 수 있으며, express로 서버를 구축한 경험이 있습니다.",
+        desc: "패키지 관리 툴을 사용해 React.js&Next.js 앱 생성과 상황에 따라 필요한 라이브러리를 설치할 수 있으며, express로 서버를 구축한 경험이 있습니다.",
     },
     {
         name: "photoshop",
@@ -56,7 +61,7 @@ export const skillText = [
     },
     {
         name: "figma",
-        desc: "그리드를 활용하여 와이어프레임 제작, 디자인 시안 제작, 인터렉션을 활용한 프로토타입 제작, 이미지 편집을 할 수 있으며 툴을 사용한 업무 소통과 회의 내용 메모하고, 관리를 할 수 있습니다.",
+        desc: "와이어프레임 제작, 디자인 시안 제작, 인터렉션을 활용한 프로토타입 제작, 이미지 편집을 할 수 있으며 툴을 사용한 업무 소통과 회의 내용 메모하고, 관리를 할 수 있습니다.",
     },
     {
         name: "vercel",
@@ -115,10 +120,11 @@ export const projectText = [
     {
         num: "01",
         title: "bbatsue",
-        join: "팀 프로젝트",
+        join: "팀 프로젝트 (4인)",
+        contribution: "기여도: 50%",
         img: "site1-pc.png",
         skill: "html5, scss, js, bootstrap",
-        desc: "첫 팀프로젝트로 제작한 베이커리 사이트입니다. bootstrap의 그리드를 활용하여 제작하였고 영양정보 API를 사용했으며, 스크롤 애니메이션, 탭메뉴를 구현했습니다. gitflow 방식으로 브랜치를 나눠서 협업하고 vercel로 배포했습니다.",
+        desc: "첫 팀프로젝트로 제작한 베이커리 사이트입니다. bootstrap의 그리드를 활용하여 제작하였고 영양정보 API를 사용했으며, 스크롤 애니메이션, 탭메뉴를 구현했습니다. gitflow 방식으로 브랜치를 나눠서 협업하고 vercel로 배포했습니다. figma를 활용하여 전체적인 디자인을 했으며 메인 페이지&로그인 페이지를 담당하였습니다.",
         git: "https://github.com/hejo47/bbatsueWeb",
         view: "https://bbatsue-web.vercel.app/",
     },
@@ -126,9 +132,10 @@ export const projectText = [
         num: "02",
         title: "anbd",
         join: "팀 프로젝트 (리팩토링)",
+        contribution: "기여도: 40%",
         img: "site2-pc.png",
         skill: "html5, js, react.js, styled-component, node.js",
-        desc: "중고거래 사이트를 벤치마킹하여 리액트로 심플하게 제작한 웹&앱입니다. 팀으로 진행한 프로젝트인데 cloudType으로 배포한 서버가 닫혀서 리팩토링중에 있습니다.",
+        desc: "중고거래 사이트를 벤치마킹하여 React.js로 심플하게 제작한 웹&앱입니다. figma를 활용하여 전체적인 디자인을 했으며 메인 페이지&프로덕트 페이지를 담당하였습니다. 팀으로 진행한 프로젝트인데 cloudType으로 배포한 서버가 닫혀서 firebase와 React.js를 사용하여 리팩토링중에 있습니다.",
         git: "https://github.com/KimJunHo98/anbd-market",
         view: "https://anbd-market.vercel.app/",
         ready: "컨텐츠를 준비중입니다"
@@ -139,7 +146,7 @@ export const projectText = [
         join: "개인 프로젝트",
         img: "site3-pc.png",
         skill: "html5, css3, js, react.js, firebase",
-        desc: "트위터를 벤치마킹하여 리액트로 심플하게 제작한 사이트입니다. firebase를 사용한 로그인&로그아웃, 회원가입, 실시간 업로드, 삭제, 수정기능을 구현했습니다.",
+        desc: "트위터를 벤치마킹하여 React.js로 심플하게 제작한 사이트입니다. 서버리스로 CRUD 프로젝트를 제작하기 위해 firebase를 사용했으며 firebase auth를 활용하여 로그인&로그아웃&회원가입 기능을 구현하고 cloudStorage를 활용하여 실시간 업로드, 삭제, 수정기능을 구현했습니다.",
         git: "https://github.com/KimJunHo98/twit",
         view: "https://kimjunho98.github.io/twit/",
     },
@@ -149,7 +156,7 @@ export const projectText = [
         join: "개인 프로젝트",
         img: "site4-pc.png",
         skill: "html5, css3, js, react.js",
-        desc: "open API와 리액트를 활용하여 제작한 영화정보 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 flex를 사용하여 반응형으로 제작, vercel로 배포했습니다.",
+        desc: "open API와 React.js를 활용하여 제작한 영화정보 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 flex를 사용하여 반응형으로 제작, vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/movie-app",
         view: "https://movie-app-liart-chi.vercel.app/",
     },
@@ -159,7 +166,7 @@ export const projectText = [
         join: "개인 프로젝트",
         img: "site5-pc.png",
         skill: "html5, scss, js, react.js",
-        desc: "리액트를 사용한 포트폴리오 사이트입니다. gsap을 사용한 가로스크롤, 스무스 스크롤, 마우스 포인터 이벤를 구현했고, 페이지네이션, 스크롤 진행바, aos를 사용한 애니메이션을 구현했으며 vercel로 배포했습니다.",
+        desc: "React.js를 사용한 포트폴리오 사이트입니다. gsap을 사용한 가로스크롤, 스무스 스크롤, 마우스 포인터 이벤를 구현했고, 페이지네이션, 스크롤 퍼센테이지, aos를 사용한 애니메이션을 구현했으며 vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/Portfolio-react",
         view: "https://portfolio-site-three-gules.vercel.app/",
     },
@@ -169,7 +176,7 @@ export const projectText = [
         join: "개인 프로젝트",
         img: "site6-pc.png",
         skill: "html5, scss, js, react.js",
-        desc: "리액트를 사용한 유튜브 사이트입니다. async/await, axios를 사용하여 유튜브 api의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. Gird를 사용하여 반응형으로 제작하였으며 vercel로 배포했습니다.",
+        desc: "React.js를 사용한 유튜브 사이트입니다. async/await&axios를 사용하여 비동기적으로 유튜브 api의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. gird를 사용하여 반응형으로 제작하였으며 vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/mytube",
         view: "https://mytube-gamma.vercel.app/",
     },

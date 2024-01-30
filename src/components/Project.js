@@ -69,6 +69,7 @@ const Project = () => {
                                             <div className="project_text_items">
                                                 <ul className="top_item">
                                                     <li className="project_join">{project.join}</li>
+                                                    {project.contribution && <li className="project_contribution">{project.contribution}</li>}
                                                     <li className="project_skill">{project.skill}</li>
                                                 </ul>
                                                 <p className="bottom_item">{project.desc}</p>

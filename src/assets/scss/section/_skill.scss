@@ -58,6 +58,10 @@
                         text-transform: uppercase;
                         color: var(--black);
 
+                        @include s_mobile {
+                            padding-right: 15%;
+                        }
+
                         .scroll_arrow {
                             padding-left: 50px;
 
@@ -86,6 +90,7 @@
                             height: 60%;
                         }
                         @include s_mobile {
+                            width: 80%;
                             height: 50%;
                         }
 
@@ -105,6 +110,7 @@
                                 font-size: 3rem;
                             }
                             @include s_mobile {
+                                padding: 0 0 40px 0;
                                 font-size: 2.6rem;
                             }
                         }
@@ -118,7 +124,7 @@
                                 font-size: 2rem;
                             }
                             @include s_mobile {
-                                font-size: 1.6rem;
+                                font-size: 1.4rem;
                             }
                         }
                     }

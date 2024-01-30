@@ -40,11 +40,11 @@ const Contact = () => {
                             <li ref={(el) => (contactRef.current[2] = el)}>if you want to contact me</li>
                             <li ref={(el) => (contactRef.current[3] = el)}>please contact me here</li>
                         </ul>
-                        {/* <ul className="contact_me">
+                        <ul className="contact_me">
                             <li className="my_address" ref={(el) => (contactRef.current[4] = el)}><span>email:</span>dydgnscc6845@gmail.com / dydgnscc6845@naver.com</li>
                             <li className="my_instagram" ref={(el) => (contactRef.current[5] = el)}><span>instagram:</span>k_jun_ho</li>
                             <li className="my_number" ref={(el) => (contactRef.current[6] = el)}><span>number:</span>010-5672-4735</li>
-                        </ul> */}
+                        </ul>
                     </div>
                 </div>
             </div>
