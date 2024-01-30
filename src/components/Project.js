@@ -52,6 +52,9 @@ const Project = () => {
                                 </div>
                                 {projectText.map((project, i) => (
                                     <article className={`project_item_box item${i + 1}`} key={i} ref={(el) => (horizonSectionRef.current[i] = el)}>
+                                        <div className="ready">
+                                            <span className="ready_text">{project.ready}</span>
+                                        </div>
                                         <div className="project_thumb_img">
                                             <Image
                                                 src={`/images/${project.img}`}

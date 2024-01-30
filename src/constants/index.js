@@ -125,12 +125,13 @@ export const projectText = [
     {
         num: "02",
         title: "anbd",
-        join: "팀 프로젝트",
+        join: "팀 프로젝트 (리팩토링)",
         img: "site2-pc.png",
-        skill: "html5, scss, js, react.js, node.js, sqlLite",
-        desc: "중고거래 사이트를 벤치마킹하여 리액트로 심플하게 제작한 웹&앱입니다. 검색기능, 상품등록, 결제기능, swiper를 사용한 슬라이드 배너를 구현했고 gitflow 방식으로 브랜치를 나눠서 협업했습니다. PWA 앱으로 제작하였으며, vercel로 배포를 했습니다.",
-        git: "https://github.com/2ANBD/ANBD",
-        view: "https://anbd.vercel.app/",
+        skill: "html5, js, react.js, styled-component, node.js",
+        desc: "중고거래 사이트를 벤치마킹하여 리액트로 심플하게 제작한 웹&앱입니다. 팀으로 진행한 프로젝트인데 cloudType으로 배포한 서버가 닫혀서 리팩토링중에 있습니다.",
+        git: "https://github.com/KimJunHo98/anbd-market",
+        view: "https://anbd-market.vercel.app/",
+        ready: "컨텐츠를 준비중입니다"
     },
     {
         num: "03",
