@@ -21,7 +21,7 @@ const Project = () => {
         // 사용자가 모바일 기기인지 확인
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-        let scrollTween = gsap.to(horizonSection, {
+        const horizontalScroll = gsap.to(horizonSection, {
             xPercent: -120 * (horizonSection.length - 1),
             ease: "none",
             scrollTrigger: {
@@ -29,15 +29,15 @@ const Project = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile ? 0.2 : 1, // 모바일 기기 여부에 따라 scrub 값을 설정
-                smooth: true,
+                scrub: isMobile? 3 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
+                smooth: true, 
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
             },
         });
 
         return () => {
-            scrollTween.kill();
+            horizontalScroll.kill();
         };
     }, [horizonSectionRef]);
 
