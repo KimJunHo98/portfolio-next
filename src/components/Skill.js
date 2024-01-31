@@ -22,10 +22,6 @@ const Skill = () => {
 
         // 사용자가 모바일 기기인지 확인
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        console.log(isMobile);
-
-        // 모바일 기기 여부에 따라 scrub 값을 설정
-        const scrubValue = isMobile ? 0.5 : 1;
 
         let scrollTween = gsap.to(section, {
             xPercent: -150 * (section.length - 1),
@@ -35,7 +31,7 @@ const Skill = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: scrubValue,
+                scrub: isMobile ? 0.2 : 1, // 모바일 기기 여부에 따라 scrub 값을 설정
                 smooth: true,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
