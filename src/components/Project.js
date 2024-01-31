@@ -18,6 +18,13 @@ const Project = () => {
         const horizontal = projectRef.current;
         const horizonSection = horizonSectionRef.current;
 
+        // 사용자가 모바일 기기인지 확인
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        console.log(isMobile);
+
+        // 모바일 기기 여부에 따라 scrub 값을 설정
+        const scrubValue = isMobile ? 0.5 : 1;
+
         let scrollTween = gsap.to(horizonSection, {
             xPercent: -120 * (horizonSection.length - 1),
             ease: "none",
@@ -26,7 +33,7 @@ const Project = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: 1,
+                scrub: scrubValue,
                 smooth: true,
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
@@ -51,7 +58,11 @@ const Project = () => {
                                     <p className="project_intro_title project_intro_title2">projects</p>
                                 </div>
                                 {projectText.map((project, i) => (
-                                    <article className={`project_item_box item${i + 1}`} key={i} ref={(el) => (horizonSectionRef.current[i] = el)}>
+                                    <article
+                                        className={`project_item_box item${i + 1}`}
+                                        key={i}
+                                        ref={(el) => (horizonSectionRef.current[i] = el)}
+                                    >
                                         <div className="ready">
                                             <span className="ready_text">{project.ready}</span>
                                         </div>
@@ -65,11 +76,15 @@ const Project = () => {
                                             />
                                         </div>
                                         <div className="project_text_box">
-                                            <h3 className="project_sub_title">{i + 1}. {project.title}</h3>
+                                            <h3 className="project_sub_title">
+                                                {i + 1}. {project.title}
+                                            </h3>
                                             <div className="project_text_items">
                                                 <ul className="top_item">
                                                     <li className="project_join">{project.join}</li>
-                                                    {project.contribution && <li className="project_contribution">{project.contribution}</li>}
+                                                    {project.contribution && (
+                                                        <li className="project_contribution">{project.contribution}</li>
+                                                    )}
                                                     <li className="project_skill">{project.skill}</li>
                                                 </ul>
                                                 <p className="bottom_item">{project.desc}</p>

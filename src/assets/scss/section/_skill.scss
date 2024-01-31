@@ -58,10 +58,6 @@
                         text-transform: uppercase;
                         color: var(--black);
 
-                        @include s_mobile {
-                            padding-right: 15%;
-                        }
-
                         .scroll_arrow {
                             padding-left: 50px;
 
