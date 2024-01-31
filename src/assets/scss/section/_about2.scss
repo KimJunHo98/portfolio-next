@@ -79,8 +79,6 @@
                 }
 
                 .tabmenu_list {
-                    padding: 10px 0;
-
                     @include mobile {
                         width: 173px;
                     }
@@ -98,12 +96,12 @@
                         display: block;
                         position: relative;
                         padding: 12px 0;
-                        border: 2px solid var(--black);
                         text-align: center;
                         text-transform: uppercase;
                         transition: all 0.3s ease-in;
                         font-family: var(--mainEng-font);
                         font-size: 3rem;
+                        font-weight: 600;
                         color: var(--black);
 
                         @include tablet {
@@ -122,8 +120,9 @@
 
                         @for $i from 1 through 4 {
                             &.active#{$i} {
-                                background-color: var(--white#{$i}00);
-                                color: var(--white);
+                                font-weight: 600;
+                                background-color: var(--black);
+                                color: var(--white#{$i}00);
                             }
                         }
                     }

@@ -25,16 +25,16 @@ const Skill = () => {
 
         let horizontalScroll = gsap.to(section, {
             xPercent: -150 * (section.length - 1),
-            ease: "none",
+            ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
                 scrub: isMobile? 4 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
-                smooth: true, 
-                invalidateOnRefresh: true,
-                anticipatePin: 1,
+                smooth: isMobile? false : true, 
+                invalidateOnRefresh: isMobile? false :true,
+                anticipatePin: isMobile? 0 : 1,
             },
         });
 
