@@ -29,7 +29,7 @@ const Project = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile? 3 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
+                scrub: isMobile? 4 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
                 smooth: true, 
                 invalidateOnRefresh: true,
                 anticipatePin: 1,
