@@ -95,14 +95,20 @@
                             justify-content: space-around;
                             color: var(--black100);
 
+                            @include tablet {
+                                height: 92%;
+                            }
                             @include s_mobile {
                                 justify-content: space-between;
                             }
 
-                            .site_sub_title {
+                            .site_title,
+                            .site_num {
+                                display: inline-block;
                                 font-size: 7rem;
                                 font-weight: 600;
                                 font-family: var(--mainEng-font);
+                                line-height: 1;
                                 letter-spacing: -4px;
 
                                 @include tablet {

@@ -29,8 +29,8 @@ const Project = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile? 5 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
-                smooth: false, 
+                scrub: isMobile ? 5 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
+                smooth: false,
             },
         });
 
@@ -49,7 +49,7 @@ const Project = () => {
                             <div className="project_items">
                                 <div className="project_item_box intro">
                                     <p className="project_intro_title project_intro_title1">about my</p>
-                                    <p className="project_intro_title project_intro_title2">projects</p>
+                                    <p className="project_intro_title project_intro_title2">development<br/>projects</p>
                                 </div>
                                 {projectText.map((project, i) => (
                                     <article
@@ -57,9 +57,20 @@ const Project = () => {
                                         key={i}
                                         ref={(el) => (horizonSectionRef.current[i] = el)}
                                     >
-                                        <div className="ready">
-                                            <span className="ready_text">{project.ready}</span>
-                                        </div>
+                                        {project.ready && (
+                                            <div className="ready">
+                                                <span className="ready_text">{project.ready}</span>
+                                                <Link
+                                                    href={project.view}
+                                                    className="link_btns"
+                                                    target="_blank"
+                                                    role="link"
+                                                    aria-label="사이트 링크"
+                                                >
+                                                    hover
+                                                </Link>
+                                            </div>
+                                        )}
                                         <div className="project_thumb_img">
                                             <Image
                                                 src={`/images/${project.img}`}

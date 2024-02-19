@@ -8,11 +8,11 @@ export const headerNav = [
         url: "#skill",
     },
     {
-        title: "site",
+        title: "publishing",
         url: "#site",
     },
     {
-        title: "project",
+        title: "development",
         url: "#project",
     },
     {
@@ -77,38 +77,43 @@ export const siteText = [
     {
         num: "01",
         title: "glife",
+        contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "경기생활문화센터 사이트를 리뉴얼한 사이트입니다. 반응형, 웹표준, 웹접근성을 고려하여 제작했으며 쿠키 데이터 사용한 드래그 팝업, 페이드인아웃 배너, 각 섹션마다 스크롤 애니메이션을 구현했습니다. flex를 사용하여 반응형으로 제작했습니다.",
+        desc: "경기생활문화센터 사이트를 리뉴얼한 사이트입니다. flex를 사용한 반응형, 웹표준, 웹접근성을 고려하여 제작했으며 쿠키 데이터 사용한 드래그 팝업, 페이드인아웃 배너, 각 섹션마다 스크롤 애니메이션을 구현했습니다.",
         git: "https://github.com/KimJunHo98/project1",
         view: "https://kimjunho98.github.io/project1/",
     },
     {
         num: "02",
         title: "gabia",
+        contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "가비아 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 클라우드를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다. flex를 사용하여 반응형으로 제작했습니다.",
+        desc: '가비아 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 "클라우드"를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다.',
         git: "https://github.com/KimJunHo98/gabia",
         view: "https://kimjunho98.github.io/gabia/",
     },
     {
         num: "03",
         title: "netflix",
+        contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "넷플릭스 사이트입니다. 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 슬라이드다운 영역, 팝업을 구현했습니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다. flex를 사용하여 반응형으로 제작했습니다.",
+        desc: "넷플릭스 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 메인페이지로 구성하고 질문영역에 토글슬라이드다운 기능을 구현했으며 개발자모드로 참고하여 코드를 분석 후 제작했습니다.",
         git: "https://github.com/KimJunHo98/flix",
         view: "https://kimjunho98.github.io/flix/",
     },
     {
         num: "04",
         title: "TodoList",
+        contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "투두리스트 사이트입니다. 현재 날짜를 알려주며 년도&달을 이동할 수 있는 캘린더, 현재 시간, 할 일을 기록하고 삭제할 수 있는 인풋영역을 심플하게 구현했습니다.",
+        desc: "투두리스트 사이트입니다. 적응형으로 제작했으며 현재 날짜를 알려주며 년도&달을 이동할 수 있는 캘린더, 현재 시간, 할 일을 기록하고 삭제할 수 있는 인풋영역을 심플하게 구현했습니다.",
         git: "https://github.com/KimJunHo98/todolist",
         view: "https://kimjunho98.github.io/todolist/",
     },
     {
         num: "05",
         title: "Draw Board",
+        contribution: "기여도: 100%",
         skill: "html5, css3, js",
         desc: "그림판 사이트입니다. canvas를 사용하여 그림 그리기, 텍스트 삽입, 이미지 삽입, 초기화, 지우기, 저장, 토글 메뉴 등의 기능을 구현했습니다.",
         git: "https://github.com/KimJunHo98/draw-board",
@@ -131,19 +136,20 @@ export const projectText = [
     {
         num: "02",
         title: "anbd",
-        join: "팀 프로젝트 (리팩토링)",
+        join: "팀 프로젝트 (4인)",
         contribution: "기여도: 40%",
         img: "site2-pc.png",
         skill: "html5, js, react.js, styled-component, node.js",
         desc: "중고거래 사이트를 벤치마킹하여 React.js로 심플하게 제작한 웹&앱입니다. figma를 활용하여 전체적인 디자인을 했으며 메인 페이지&프로덕트 페이지를 담당하였습니다. 팀으로 진행한 프로젝트였지만 cloudType으로 배포한 서버가 닫혀서 firebase와 React.js를 사용하여 리팩토링중에 있습니다.",
         git: "https://github.com/KimJunHo98/anbd-market",
         view: "https://anbd-market.vercel.app/",
-        ready: "컨텐츠를 준비중입니다"
+        ready: "컨텐츠를 준비중입니다",
     },
     {
         num: "03",
         title: "twit",
         join: "개인 프로젝트",
+        contribution: "기여도: 100%",
         img: "site3-pc.png",
         skill: "html5, css3, js, react.js, firebase",
         desc: "트위터를 벤치마킹하여 React.js로 심플하게 제작한 사이트입니다. 서버리스로 CRUD 프로젝트를 제작하기 위해 firebase를 사용했으며 firebase auth를 활용하여 로그인&로그아웃&회원가입 기능을 구현하고 cloudStorage를 활용하여 실시간 업로드, 삭제, 수정기능을 구현했습니다.",
@@ -154,6 +160,7 @@ export const projectText = [
         num: "04",
         title: "moviemoa",
         join: "개인 프로젝트",
+        contribution: "기여도: 100%",
         img: "site4-pc.png",
         skill: "html5, css3, js, react.js",
         desc: "open API와 React.js를 활용하여 제작한 영화정보 사이트입니다. async/await 함수, useState, useEffect, useParams 등의 훅을 사용하여 검색기능, 더보기 기능을 구현했고 flex를 사용하여 반응형으로 제작, vercel로 배포했습니다.",
@@ -164,6 +171,7 @@ export const projectText = [
         num: "05",
         title: "portfolio-react",
         join: "개인 프로젝트",
+        contribution: "기여도: 100%",
         img: "site5-pc.png",
         skill: "html5, scss, js, react.js",
         desc: "React.js를 사용한 포트폴리오 사이트입니다. gsap을 사용한 가로스크롤, 스무스 스크롤, 마우스 포인터 이벤를 구현했고, 페이지네이션, 스크롤 퍼센테이지, aos를 사용한 애니메이션을 구현했으며 vercel로 배포했습니다.",
@@ -174,6 +182,7 @@ export const projectText = [
         num: "06",
         title: "mytube",
         join: "개인 프로젝트",
+        contribution: "기여도: 100%",
         img: "site6-pc.png",
         skill: "html5, scss, js, react.js",
         desc: "React.js를 사용한 유튜브 사이트입니다. async/await&axios를 사용하여 비동기적으로 유튜브 api의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. gird를 사용하여 반응형으로 제작하였으며 vercel로 배포했습니다.",
@@ -217,7 +226,7 @@ export const aboutText = [
         text: `"협업하기 좋은 동료가 되겠습니다."`,
         desc: `저의 장점은 소통을 중요시하며, 상대방의 의견을 이해하려는 노력이 크다는 것입니다. 
         프로젝트를 진행하면서 팀 내에서 원활한 커뮤니케이션은 제게 핵심적인 가치로 다가왔고, 문제 발생 시 공감 능력을 발휘하여 상대방의 마음을 편안하게 해주는 역할을 자주 하게 되었습니다. 
-        현실에서도 친구들의 이야기를 듣고 이에 대한 해결방법을 제시하거나 공감해주는 것을 즐겨합니다. 
+        현실에서도 친구들의 이야기를 듣고 이에 대한 해결방법을 제시하거나 공감해주는 것을 즐겨합니다.
         이러한 경험은 특히 팀 프로젝트에서 팀원들과의 소통에 긍정적인 영향을 미쳤습니다. 프로젝트 중에는 다양한 의견이 충돌하기도 했지만, 팀원들의 의견과 스케줄을 조율하기 위해 오프라인이 아니여도 카톡방을 개설하여 소통과 정보공유를 하였고,
         가지고 있는 지식과 경험으로 부족한 부분을 적극적으로 피드백을 하고 도와주며 프로젝트가 원활히 진행되도록 이끌어 나갔습니다.
         앞으로도 계속해서 소통과 이해에 중점을 두어 먼저 말하고 서로에게 열린 자세를 유지하겠습니다. 항상 동료들과 원활한 협업을 위해 최선을 다하며, 언제나 함께 성장하는 동료가 되기 위해 노력하겠습니다. 

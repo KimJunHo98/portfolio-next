@@ -62,7 +62,7 @@ const About2 = () => {
                                         >
                                             {about.text}
                                             <br />
-                                            <span className="introduce_desc">{about.desc}</span>
+                                            <p className="introduce_desc">{about.desc}</p>
                                         </li>
                                     </Fragment>
                                 ))}

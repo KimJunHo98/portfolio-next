@@ -11,17 +11,17 @@ const Site = () => {
                     <div className="site">
                         <div className="site_item_box intro">
                             <p className="site_intro_title site_intro_title1">about my</p>
-                            <p className="site_intro_title site_intro_title2">web site</p>
+                            <p className="site_intro_title site_intro_title2">publishing site</p>
                         </div>
                         <div className="site_items_wrap">
                             {siteText.map((site, i) => (
                                 <article className={`site_item_box item${i + 1}`} key={i}>
                                     <div className="site_items">
                                         <div className="site_text_box">
-                                            <h3 className="site_sub_title">
-                                                <span className="site_num">{i + 1}.</span>&nbsp;
-                                                {site.title}
-                                            </h3>
+                                            <div className="site_title_box">
+                                                <span className="site_num">{i + 1}.</span>
+                                                <h3 className="site_title">{site.title}</h3>
+                                            </div>
                                             <p className="site_desc">{site.desc}</p>
                                             <div className="site_link_box">
                                                 <Link
@@ -44,7 +44,9 @@ const Site = () => {
                                                 </Link>
                                             </div>
                                         </div>
-                                        <p className="site_skills"><span>site</span> use stack: {site.skill}</p>
+                                        <p className="site_skills">
+                                            <span>{site.contribution}</span> use stack: {site.skill}
+                                        </p>
                                     </div>
                                 </article>
                             ))}
