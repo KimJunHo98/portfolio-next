@@ -49,7 +49,11 @@ const Project = () => {
                             <div className="project_items">
                                 <div className="project_item_box intro">
                                     <p className="project_intro_title project_intro_title1">about my</p>
-                                    <p className="project_intro_title project_intro_title2">development<br/>projects</p>
+                                    <p className="project_intro_title project_intro_title2">
+                                        side
+                                        <br />
+                                        projects
+                                    </p>
                                 </div>
                                 {projectText.map((project, i) => (
                                     <article
@@ -57,21 +61,7 @@ const Project = () => {
                                         key={i}
                                         ref={(el) => (horizonSectionRef.current[i] = el)}
                                     >
-                                        {project.ready && (
-                                            <div className="ready">
-                                                <span className="ready_text">{project.ready}</span>
-                                                <Link
-                                                    href={project.view}
-                                                    className="link_btns"
-                                                    target="_blank"
-                                                    role="link"
-                                                    aria-label="사이트 링크"
-                                                >
-                                                    hover
-                                                </Link>
-                                            </div>
-                                        )}
-                                        <div className="project_thumb_img">
+                                        <div className={`project_thumb_img img${i + 1}`}>
                                             <Image
                                                 src={`/images/${project.img}`}
                                                 alt={project.title}

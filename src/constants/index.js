@@ -136,14 +136,13 @@ export const projectText = [
     {
         num: "02",
         title: "anbd",
-        join: "팀 프로젝트 (4인)",
-        contribution: "기여도: 40%",
+        join: "개인 프로젝트",
+        contribution: "기여도: 100%",
         img: "site2-pc.png",
         skill: "html5, js, react.js, styled-component, node.js",
-        desc: "중고거래 사이트를 벤치마킹하여 React.js로 심플하게 제작한 웹&앱입니다. figma를 활용하여 전체적인 디자인을 했으며 메인 페이지&프로덕트 페이지를 담당하였습니다. 팀으로 진행한 프로젝트였지만 cloudType으로 배포한 서버가 닫혀서 firebase와 React.js를 사용하여 리팩토링중에 있습니다.",
+        desc: "중고거래 사이트를 벤치마킹하여 React.js로 심플하게 제작한 웹&앱입니다. figma를 활용하여 전체적인 디자인을 했으며 메인 페이지&프로덕트 페이지를 담당하였습니다. 팀으로 진행한 프로젝트였지만 cloudType으로 배포한 서버가 닫혀서 개인적으로 firebase와 React.js를 사용하여 리팩토링을 했습니다.",
         git: "https://github.com/KimJunHo98/anbd-market",
         view: "https://anbd-market.vercel.app/",
-        ready: "컨텐츠를 준비중입니다",
     },
     {
         num: "03",
