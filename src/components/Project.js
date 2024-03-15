@@ -22,7 +22,7 @@ const Project = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(horizonSection, {
-            xPercent: -120 * (horizonSection.length - 1),
+            xPercent: isMobile ? -120 * (horizonSection.length - 1) : -125 * (horizonSection.length - 1),
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,
@@ -68,6 +68,7 @@ const Project = () => {
                                                 style={{ objectFit: "cover" }}
                                                 width={500}
                                                 height={500}
+                                                loading="lazy"
                                             />
                                         </div>
                                         <div className="project_text_box">
@@ -82,7 +83,7 @@ const Project = () => {
                                                     )}
                                                     <li className="project_skill">{project.skill}</li>
                                                 </ul>
-                                                <p className="bottom_item">{project.desc}</p>
+                                                <p className="project_desc">{project.desc}</p>
                                             </div>
                                             <div className="project_link_box">
                                                 <Link

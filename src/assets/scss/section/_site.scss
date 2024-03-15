@@ -70,11 +70,12 @@
                     position: -webkit-sticky;
                     position: sticky;
                     left: 0;
+                    border: 1px solid #111;
                     border-radius: 15px;
                     text-transform: uppercase;
                     font-family: var(--mainKor-font);
                     color: var(--white);
-                    background-color: var(--white#{$i}00);
+                    background-color: var(--white);
 
                     @include mobile {
                         width: 100%;
@@ -110,6 +111,7 @@
                                 font-family: var(--mainEng-font);
                                 line-height: 1;
                                 letter-spacing: -4px;
+                                color: var(--white#{$i}00);
 
                                 @include tablet {
                                     font-size: 5rem;
@@ -173,7 +175,7 @@
                                         transform: translateX(3px) translateY(-3px);
                                     }
                                     &:hover {
-                                        color: var(--white#{$i}00);
+                                        color: var(--white);
                                         background-color: var(--black100);
 
                                         &:before,

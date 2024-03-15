@@ -4,11 +4,11 @@
     background-color: var(--subBg-color);
 
     @include desktop {
-        .container { 
-            width: 100%; 
-            max-width: 100%; 
+        .container {
+            width: 100%;
+            max-width: 100%;
         }
-    };
+    }
     @include tablet {
         .inner {
             padding: 0 15px;
@@ -82,28 +82,32 @@
                             height: 60%;
                         }
                         @include mobile {
-                            width: 70%;
+                            width: 60%;
                             height: 60%;
+                            padding: 20px;
                         }
                         @include s_mobile {
-                            width: 80%;
+                            width: 70%;
                             height: 50%;
+                            padding: 15px;
                         }
 
                         .skill_name {
-                            padding: 100px 0;
+                            padding: 50px 0;
                             font-size: 5rem;
                             text-transform: uppercase;
                             font-weight: 600;
                             font-family: var(--mainEng-font);
 
                             @include tablet {
-                                padding: 60px 0;
                                 font-size: 4rem;
                             }
                             @include mobile {
                                 padding: 50px 0;
                                 font-size: 3rem;
+                            }
+                            @media all and (max-width: 660px) {
+                                padding: 40px 0;
                             }
                             @include s_mobile {
                                 padding: 0 0 40px 0;
@@ -116,8 +120,14 @@
                             font-weight: 400;
                             font-family: var(--mainKor-font);
 
+                            @include tablet {
+                                font-size: 1.8rem;
+                            }
                             @include mobile {
-                                font-size: 2rem;
+                                font-size: 1.8rem;
+                            }
+                            @media all and (max-width: 660px) {
+                                font-size: 1.6rem;
                             }
                             @include s_mobile {
                                 font-size: 1.4rem;
@@ -135,7 +145,7 @@
                     .skill_title {
                         color: var(--black);
                     }
-    
+
                     .skill_name {
                         color: var(--black);
                     }
