@@ -105,9 +105,9 @@ export const siteText = [
         title: "netflix",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "넷플릭스 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 메인페이지로 구성하고 질문영역에 토글슬라이드다운 기능을 구현했으며 개발자모드로 참고하여 코드를 분석 후 제작했습니다.",
+        desc: "플릭스 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 로그인페이지와 메인페이지로 구성하고 질문영역에 토글슬라이드다운 기능을 구현했습니다.",
         git: "https://github.com/KimJunHo98/flix",
-        view: "https://kimjunho98.github.io/flix/",
+        view: "https://kimjunho98.github.io/flix-movie/",
     },
     {
         num: "05",
