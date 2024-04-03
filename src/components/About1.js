@@ -48,7 +48,7 @@ const About1 = () => {
                                     안녕하세요, 신입 웹 퍼블리셔 김준호입니다.
                                 </p>
                                 <p className="text_items" ref={(el) => (textRef.current[3] = el)}>
-                                    개발 공부를 하며 전에는 느껴보지 못했던 재미와 오기를
+                                    퍼블리싱 & 개발 공부를 하며 전에는 느껴보지 못했던 재미와 오기를
                                 </p>
                                 <p className="text_items" ref={(el) => (textRef.current[4] = el)}>
                                     느끼게 되며 웹 퍼블리셔 & 프론트엔드 개발자에 빠져들게 되었습니다.
