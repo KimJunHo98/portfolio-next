@@ -22,7 +22,7 @@ const Project = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(horizonSection, {
-            xPercent: isMobile ? -120 * (horizonSection.length - 1) : -125 * (horizonSection.length - 1),
+            xPercent: isMobile ? -125 * (horizonSection.length - 1) : -130 * (horizonSection.length - 1),
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,

@@ -23,8 +23,8 @@ const Skill = () => {
         // 사용자가 모바일 기기인지 확인
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-        let horizontalScroll = gsap.to(section, {
-            xPercent: -150 * (section.length - 1),
+        const horizontalScroll = gsap.to(section, {
+            xPercent: isMobile ? -150 * (section.length - 1) : -160 * (section.length - 1),
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,

@@ -62,7 +62,7 @@ const About2 = () => {
                                         >
                                             {about.text}
                                             <br />
-                                            <p className="introduce_desc">{about.desc1}<br />{about.desc2}<br />{about.desc3}</p>
+                                            <p className="introduce_desc">{about.desc1}<br /><br />{about.desc2}<br /><br />{about.desc3}</p>
                                         </li>
                                     </Fragment>
                                 ))}
