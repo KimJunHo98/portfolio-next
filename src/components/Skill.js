@@ -24,7 +24,7 @@ const Skill = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(section, {
-            xPercent: isMobile ? -150 * (section.length - 1) : -160 * (section.length - 1),
+            xPercent: isMobile ? -155 * (section.length - 1) : -160 * (section.length - 1),
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,

@@ -156,7 +156,7 @@ export const projectText = [
     },
     {
         num: "04",
-        title: "moviemoa",
+        title: "movieflix",
         join: "개인 프로젝트",
         contribution: "기여도: 100%",
         img: "site4-pc.png",
