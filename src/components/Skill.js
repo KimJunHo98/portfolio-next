@@ -24,14 +24,14 @@ const Skill = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(section, {
-            xPercent: isMobile ? -155 * (section.length - 1) : -160 * (section.length - 1),
+            xPercent: isMobile ? -(section.length) * 140 : -(section.length) * 140,
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile? 5 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
+                scrub: isMobile? 5 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
                 smooth: false, 
             },
         });

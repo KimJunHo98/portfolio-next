@@ -11,6 +11,8 @@ const Project = () => {
     const { horizonSectionRef } = useDarkMode();
     const projectRef = useRef(null);
 
+    console.log(horizonSectionRef.current);
+
     // 가로 스크롤
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -22,14 +24,14 @@ const Project = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(horizonSection, {
-            xPercent: isMobile ? -125 * (horizonSection.length - 1) : -130 * (horizonSection.length - 1),
+            xPercent: isMobile ? -(horizonSection.length) * 100 : -(horizonSection.length) * 100,
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile ? 5 : 2, // 모바일 기기 여부에 따라 scrub 값을 설정
+                scrub: isMobile ? 5 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
                 smooth: false,
             },
         });
