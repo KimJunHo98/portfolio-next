@@ -110,7 +110,7 @@ export const siteText = [
         view: "https://bbatsue-web.vercel.app/",
     },
     {
-        num: "05",
+        num: "04",
         title: "Draw Board",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
