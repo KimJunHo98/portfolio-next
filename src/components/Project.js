@@ -11,8 +11,6 @@ const Project = () => {
     const { horizonSectionRef } = useDarkMode();
     const projectRef = useRef(null);
 
-    console.log(horizonSectionRef.current);
-
     // 가로 스크롤
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);

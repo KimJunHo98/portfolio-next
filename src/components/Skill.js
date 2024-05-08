@@ -4,6 +4,7 @@ import { useDarkMode, useScrollListener } from "../context/DarkModeContext";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 const Skill = () => {
     const { setDark, projectOffsetRef, skillOffsetRef } = useDarkMode();
@@ -24,15 +25,15 @@ const Skill = () => {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
         const horizontalScroll = gsap.to(section, {
-            xPercent: isMobile ? -(section.length) * 140 : -(section.length) * 135,
+            xPercent: isMobile ? -section.length * 140 : -section.length * 135,
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: horizontal,
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile? 5 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
-                smooth: false, 
+                scrub: isMobile ? 5 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
+                smooth: false,
             },
         });
 
@@ -57,6 +58,7 @@ const Skill = () => {
                                     <div className={`skill_item_box item${i + 1}`} key={i} ref={(el) => (horizItemRef.current[i] = el)}>
                                         <h4 className="skill_name">{skill.name}</h4>
                                         <p className="skill_desc">{skill.desc}</p>
+                                        <Image src={skill.image} alt={skill.name} width={300} height={300} className="skill_images" />
                                     </div>
                                 ))}
                             </div>

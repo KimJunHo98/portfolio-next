@@ -88,8 +88,8 @@
                         }
                         @include s_mobile {
                             width: 70%;
-                            height: 50%;
-                            padding: 15px;
+                            height: 45%;
+                            padding: 18px;
                         }
 
                         .skill_name {
@@ -114,23 +114,33 @@
                                 font-size: 2.6rem;
                             }
                         }
-                        .skill_desc {
-                            line-height: 1.6;
-                            font-size: 2rem;
-                            font-weight: 400;
-                            font-family: var(--mainKor-font);
+                        .skill_desc{
+                            font-size: 1.8rem;
+                            padding-bottom: 20px;
 
-                            @include tablet {
-                                font-size: 1.8rem;
-                            }
                             @include mobile {
-                                font-size: 1.8rem;
-                            }
-                            @media all and (max-width: 660px) {
                                 font-size: 1.6rem;
                             }
                             @include s_mobile {
                                 font-size: 1.4rem;
+                            }
+                        }
+                        .skill_images {
+                            width: 300px;
+                            height: auto;
+                            object-fit: cover;
+
+                            @include tablet {
+                                width: 250px;
+                            }
+                            @include mobile {
+                                width: 200px;
+                            }
+                            @media all and (max-width: 660px) {
+                                width: 180px;
+                            }
+                            @include s_mobile {
+                                width: 150px;
                             }
                         }
                     }
