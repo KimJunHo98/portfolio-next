@@ -28,7 +28,7 @@ export const headerNav = [
 export const skillText = [
     {
         name: "html5 & css3",
-        desc: "시멘틱 태그 사용, 반응형 레이아웃, 크로스브라우징, 웹 표준/접근성 준수 등",
+        desc: "시멘틱 태그 사용, 반응형 레이아웃, 애니메이션, 크로스브라우징, 웹 표준/접근성 준수 등",
         image: "/images/skill/html-css.png",
     },
     {
@@ -38,7 +38,7 @@ export const skillText = [
     },
     {
         name: "javascript",
-        desc: "반복문 및 조건문, 이벤트 처리, DOM 조작, 비동기 작업, REST API연동 등",
+        desc: "반복문 및 조건문, 이벤트 처리, 인터랙션, DOM 조작, 비동기 작업, REST API연동 등",
         image: "/images/skill/js.png",
     },
     {
@@ -53,17 +53,17 @@ export const skillText = [
     },
     {
         name: "node.js",
-        desc: "npm으로 패키지 관리",
+        desc: "npm 패키지 및 버전 관리",
         image: "/images/skill/node.png",
     },
     {
         name: "photoshop",
-        desc: "이미지 편집, 레이어 처리, 필터 및 효과 적용, 디자인 등",
+        desc: "이미지 편집, 레이어 처리, 마스크, 필터 및 효과 적용, 디자인 등",
         image: "/images/skill/photoshop.png",
     },
     {
         name: "figma",
-        desc: "와이어프레임, 프로토파입, 디자인 시스템 제작, 협업 및 공유 등",
+        desc: "와이어프레임, 프로토파입, UI 디자인 및 디자인 시스템 제작, 협업 및 공유 등",
         image: "/images/skill/figma.png",
     },
     {
