@@ -45,8 +45,8 @@ const Header = () => {
                 <h2 className="blind">헤더</h2>
                 <div className="header_inner">
                     <div className="header">
-                        <h1 className="header_logo" role="link">
-                            <AnchorLink href="#intro">
+                        <h1 className="header_logo">
+                            <AnchorLink href="#intro" role="link">
                                 kimjunho&apos;s<span>portfolio</span>
                             </AnchorLink>
                         </h1>

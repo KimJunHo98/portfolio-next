@@ -10,7 +10,7 @@ const Footer = () => {
     const url2 = "https://www.notion.so/My-Blog-f671a512fe944b94a56a80576b5fc731";
 
     return (
-        <footer id="footer" role="footer">
+        <footer id="footer">
             <h2 className="blind">푸터</h2>
             <div className="inner">
                 <div className="footer">

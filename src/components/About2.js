@@ -24,9 +24,9 @@ const About2 = () => {
                     <div className="about2">
                         <h3 className="about2_title">i&apos;m kind of this person</h3>
                         <div className="introduce_wrap">
-                            <ul className="introduce_tabmenu" role="tablist">
+                            <div className="introduce_tabmenu" role="tablist">
                                 {aboutText.map((about, i) => (
-                                    <li className="tabmenu_list" key={i}>
+                                    <div className="tabmenu_list" key={i}>
                                         <button
                                             className={`tabmenu_btn ${activeTab === i ? `active${i + 1}` : ""}`}
                                             role="tab"
@@ -36,22 +36,23 @@ const About2 = () => {
                                         >
                                             {about.title}
                                         </button>
-                                    </li>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                             <ul className="introduce_text_box">
                                 {aboutText.map((about, i) => (
                                     <Fragment key={i}>
                                         <li
                                             role="tabpanel"
-                                            aria-hidden={activeTab !== i}
+                                            id={`tabpanel-${i}`}
+                                            aria-labelledby={`tab-${i}`}
                                             className={`introduce_text title ${activeTab === i ? "active" : ""}`}
                                         >
                                             {about.title}
                                         </li>
                                         <li
                                             role="tabpanel"
-                                            aria-hidden={activeTab !== i}
+                                            aria-labelledby={`tabpanel-${i}`}
                                             className={`introduce_text ${activeTab === i ? "active" : ""}`}
                                         >
                                             {about.text}
