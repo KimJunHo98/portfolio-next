@@ -1,7 +1,6 @@
 import React from "react";
 import Intro from "../components/Intro";
 import About1 from "../components/About1";
-// import About3 from "../components/About3";
 import Skill from "../components/Skill";
 import Site from "../components/Site";
 import Project from "../components/Project";
@@ -13,7 +12,6 @@ const Main = () => {
         <main id="main" role="main">
             <Intro />
             <About1 />
-            {/* <About3 /> */}
             <Skill />
             <Site />
             <Project />

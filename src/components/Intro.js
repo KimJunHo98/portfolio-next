@@ -3,21 +3,17 @@ import React, { useEffect, useMemo, useRef } from "react";
 const Intro = () => {
     const firstParaRef = useRef(null);
     const secondParaRef = useRef(null);
-    const thirdParaRef = useRef(null);
 
     const textArr1 = useMemo(() => "This is Junho Kim's portfolio site made with Next.js This is Junho Kim's portfolio site made with Next.js".split(" "), []);
     const textArr2 = useMemo(() => "web publisher & frontend developer & web publisher & frontend developer & web publisher & frontend developer &".split(" "), []);
-    const textArr3 = useMemo(() => "Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down Scroll Down".split(" "), []);
 
     // 무한 마퀴텍스트
     useEffect(() => {
         const firstPara = firstParaRef.current;
         const secondPara = secondParaRef.current;
-        const thirdPara = thirdParaRef.current;
 
         let count1 = 0;
         let count2 = 0;
-        let count3 = 0;
 
         const initTexts = (el, textArr) => {
             textArr.push(...textArr);
@@ -29,7 +25,6 @@ const Intro = () => {
 
         initTexts(firstPara, textArr1);
         initTexts(secondPara, textArr2);
-        initTexts(thirdPara, textArr3);
 
         // 애니메이트 방향
         const marqueeText = (count, el, direction) => {
@@ -47,17 +42,15 @@ const Intro = () => {
         const animate = () => {
             count1++;
             count2++;
-            count3++;
 
             count1 = marqueeText(count1, firstPara, -1);
             count2 = marqueeText(count2, secondPara, 1);
-            count3 = marqueeText(count3, thirdPara, -1);
 
             window.requestAnimationFrame(animate);
         };
 
         animate();
-    }, [textArr1, textArr2, textArr3]);
+    }, [textArr1, textArr2]);
 
     return (
         <section id="intro">
@@ -79,11 +72,6 @@ const Intro = () => {
                             <li className="text_items">watched it until the end</li>
                             <li className="text_items">please enjoy watch it</li>
                         </ul>
-                        <div className="parallel_container">
-                            <div className="cover third_cover">
-                                <p className="third_parallel parallel" ref={thirdParaRef}></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
