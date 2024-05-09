@@ -26,23 +26,17 @@ const About2 = () => {
                         <div className="introduce_wrap">
                             <ul className="introduce_tabmenu" role="tablist">
                                 {aboutText.map((about, i) => (
-                                    <Fragment key={i}>
-                                        <li className="tabmenu_list">
-                                            <Link
-                                                href="#"
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    handleTabMenuBtnClick(i);
-                                                }}
-                                                onKeyDown={(e) => handleTabMenuBtnKeyDown(e, i)}
-                                                className={`tabmenu_btn ${activeTab === i ? `active${i + 1}` : ""}`}
-                                                role="tab"
-                                                aria-selected={activeTab === i}
-                                            >
-                                                {about.title}
-                                            </Link>
-                                        </li>
-                                    </Fragment>
+                                    <li className="tabmenu_list" key={i}>
+                                        <button
+                                            className={`tabmenu_btn ${activeTab === i ? `active${i + 1}` : ""}`}
+                                            role="tab"
+                                            aria-selected={activeTab === i}
+                                            onClick={() => handleTabMenuBtnClick(i)}
+                                            onKeyDown={(e) => handleTabMenuBtnKeyDown(e, i)}
+                                        >
+                                            {about.title}
+                                        </button>
+                                    </li>
                                 ))}
                             </ul>
                             <ul className="introduce_text_box">
@@ -62,7 +56,15 @@ const About2 = () => {
                                         >
                                             {about.text}
                                             <br />
-                                            <p className="introduce_desc">{about.desc1}<br /><br />{about.desc2}<br /><br />{about.desc3}</p>
+                                            <p className="introduce_desc">
+                                                {about.desc1}
+                                                <br />
+                                                <br />
+                                                {about.desc2}
+                                                <br />
+                                                <br />
+                                                {about.desc3}
+                                            </p>
                                         </li>
                                     </Fragment>
                                 ))}

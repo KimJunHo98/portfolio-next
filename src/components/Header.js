@@ -41,7 +41,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="header" ref={headerRef} role="header" className={`${isHeaderVisible ? "" : "unvisible"} ${dark ? "dark" : ""}`}>
+            <header id="header" ref={headerRef} className={`${isHeaderVisible ? "" : "unvisible"} ${dark ? "dark" : ""}`}>
                 <h2 className="blind">헤더</h2>
                 <div className="header_inner">
                     <div className="header">
