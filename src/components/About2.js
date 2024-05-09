@@ -43,7 +43,7 @@ const About2 = () => {
                                 {aboutText.map((about, i) => (
                                     <Fragment key={i}>
                                         <li
-                                            role="tabpanel"
+                                            role="tab"
                                             id={`tabpanel-${i}`}
                                             aria-labelledby={`tab-${i}`}
                                             className={`introduce_text title ${activeTab === i ? "active" : ""}`}
