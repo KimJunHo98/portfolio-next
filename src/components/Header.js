@@ -65,6 +65,7 @@ const Header = () => {
                             aria-expanded={active ? true : false}
                             aria-controls="mobile_menu"
                             role="button"
+                            aria-label="모바일 메뉴 열기"
                         >
                             <span className="btn_bar"></span>
                         </div>

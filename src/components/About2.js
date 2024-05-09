@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
 import { aboutText } from "../constants/index";
-import Link from "next/link";
 
 const About2 = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -43,18 +42,11 @@ const About2 = () => {
                                 {aboutText.map((about, i) => (
                                     <Fragment key={i}>
                                         <li
-                                            role="tab"
-                                            id={`tabpanel-${i}`}
-                                            aria-labelledby={`tab-${i}`}
                                             className={`introduce_text title ${activeTab === i ? "active" : ""}`}
                                         >
                                             {about.title}
                                         </li>
-                                        <li
-                                            role="tabpanel"
-                                            aria-labelledby={`tabpanel-${i}`}
-                                            className={`introduce_text ${activeTab === i ? "active" : ""}`}
-                                        >
+                                        <li className={`introduce_text ${activeTab === i ? "active" : ""}`}>
                                             {about.text}
                                             <br />
                                             <p className="introduce_desc">
