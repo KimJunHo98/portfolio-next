@@ -3,14 +3,14 @@
     --mainKor-font: "nanumSquareNeo";
     --subEng-font: "Anton";
 
-    --mainBg-color: #000; 
+    --mainBg-color: #000;
     --subBg-color: #ffffffe6;
     --white: #fff;
-    --white100: #d0cac3;
-    --white200: #afa395;
-    --white300: #81887c;
-    --white400: #a6afa2;
-    --white500: #b6bb95;
+    --white100: #e0e0cd;
+    --white200: #d3cfc0;
+    --white300: #c9dfdc;
+    --white400: #cbd5df;
+    --white500: #cacbde;
 
     --black: #000;
     --black100: #2b2b2b;
@@ -31,6 +31,13 @@
     @media mobile {
         line-height: 1.4;
     }
+
+    .white300 {
+        color: var(--white300); 
+    }
+    .white200 {
+        color: var(--white200); 
+    }
 }
 
 body {
@@ -47,9 +54,9 @@ body {
     padding: 10px 30px;
     color: var(--black);
     background: var(--white);
-    
-    &:focus, &:active {
+
+    &:focus,
+    &:active {
         top: 10px;
     }
-} 
-
+}

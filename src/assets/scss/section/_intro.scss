@@ -89,18 +89,6 @@
                         color: var(--black);
                     }
                 }
-                &.third_cover {
-                    border-top: 1px solid var(--white);
-                    border-bottom: 1px solid var(--white);
-                    -webkit-text-stroke: 1px var(--white);
-                    background-color: transparent;
-                    color: transparent;
-
-                    &:hover {
-                        background-color: var(--white);
-                        color: var(--black);
-                    }
-                }
             }
             .parallel {
                 display: flex;

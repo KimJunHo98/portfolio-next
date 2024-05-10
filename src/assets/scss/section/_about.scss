@@ -41,22 +41,41 @@
             letter-spacing: -3px;
             font-family: var(--mainKor-font);
             font-size: 4rem;
-            font-weight: 600;
+            font-weight: 400;
             color: var(--white);
 
+            @include tablet {
+                line-height: 1.3;
+            }
             @include mobile {
-                font-size: 10rem;
-                line-height: 1;
+                line-height: 1.3;
+                letter-spacing: -1px;
+                font-size: 2.4rem;
             }
             @include s_mobile {
-                font-size: 6rem;
+                font-size: 2.2rem;
             }
 
-            .white500 {
-                color: var(--white500);
-            }
             .bold {
                 font-size: 6rem;
+                font-weight: 600;
+
+                @include mobile {
+                    font-size: 3.6rem;
+                }
+                @include s_mobile {
+                    font-size: 3rem;
+                }
+            }
+            .block {
+                display: inline-block;
+
+                @include tablet {
+                    display: block;
+                }
+                @media all and (max-width: 660px) {
+                    display: block;
+                }
             }
         }
 
@@ -68,33 +87,85 @@
             align-items: center;
             padding-top: 50px;
 
-            .item_list {
-                font-size: 2rem;
-                color: var(--white);
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                padding-top: 0;
+            }
 
-                &:last-child {
-                    width: 40%;
+            .item_list {
+                padding-left: 20px;
+
+                @include mobile {
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                .profile_text {
+                    font-size: 2rem;
+                    color: var(--white);
+
+                    @include tablet {
+                        font-size: 1.6rem;
+                    }
+                    @include mobile {
+                        text-align: center;
+                        font-size: 1.6rem;
+                    }
+                    @media all and (max-width: 660px) {
+                        display: block;
+                        text-align: left;
+                    }
                 }
             }
 
             .profile_image_wrap {
-                width: 400px;
-                height: 400px;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                border-radius: 50%;
-                overflow: hidden;
-                background-color: rgba(230, 230, 230, 0.8);
+                width: 40%;
+                padding-left: 0;
 
-                .profile_image {
-                    width: 300px;
-                    height: auto;
-                    position: absolute;
+                @include tablet {
+                    width: auto;
+                }
+                @include mobile {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                .profile_image_box {
+                    width: 400px;
+                    height: 400px;
+                    position: relative;
                     left: 50%;
-                    bottom: -20px;
                     transform: translateX(-50%);
-                    object-fit: cover;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: rgba(230, 230, 230, 0.8);
+
+                    @include tablet {
+                        width: 300px;
+                        height: 300px;
+                    }
+                    @include mobile {
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    .profile_image {
+                        width: 300px;
+                        height: auto;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -20px;
+                        transform: translateX(-50%);
+                        object-fit: cover;
+
+                        @include tablet {
+                            width: 250px;
+                        }
+                        @include mobile {
+                            width: 250px;
+                        }
+                    }
                 }
             }
         }
