@@ -6,11 +6,11 @@
     background-color: var(--subBg-color);
 
     @include desktop {
-        .container { 
-            width: 100%; 
-            max-width: 100%; 
+        .container {
+            width: 100%;
+            max-width: 100%;
         }
-    };
+    }
     @include tablet {
         .inner {
             padding: 0 15px;
@@ -47,25 +47,29 @@
 
             @include s_mobile {
                 font-size: 8vw;
-            };
+            }
         }
         .contact_me {
             margin-top: 150px;
 
-            .my_address, .my_instagram, .my_number {
+            .my_address,
+            .my_instagram,
+            .my_number {
                 font-size: 2vw;
                 color: var(--black100);
 
                 @include mobile {
                     font-size: 1.8rem;
                 }
-    
+
                 span {
-                    padding-right: 10px;
+                    padding: 2px 5px;
                     text-transform: uppercase;
-                    font-size: 2.4vw;
+                    border-radius: 8px;
+                    font-size: 2vw;
                     font-weight: 600;
-    
+                    background-color: rgba(0, 0, 0, 0.8);
+
                     @include mobile {
                         font-size: 2rem;
                     }
