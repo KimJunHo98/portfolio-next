@@ -58,7 +58,7 @@ const Skill = () => {
                                     <div className={`skill_item_box item${i + 1}`} key={i} ref={(el) => (horizItemRef.current[i] = el)}>
                                         <h4 className="skill_name">{skill.name}</h4>
                                         <p className="skill_desc">{skill.desc}</p>
-                                        <Image src={skill.image} alt={skill.name} width={300} height={300} className="skill_images" />
+                                        <Image src={skill.image} alt={skill.name} width={300} height={300} loading="lazy" className="skill_images" />
                                     </div>
                                 ))}
                             </div>

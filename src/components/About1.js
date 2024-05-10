@@ -52,6 +52,7 @@ const About1 = () => {
                                         alt="프로필 이미지"
                                         width={300}
                                         height={300}
+                                        loading="lazy"
                                         className="profile_image"
                                     />
                                 </div>
