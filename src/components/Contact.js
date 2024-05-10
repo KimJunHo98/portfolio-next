@@ -43,7 +43,7 @@ const Contact = () => {
                         <ul className="contact_me">
                             <li className="my_address" ref={(el) => (contactRef.current[4] = el)}><span>email:</span> dydgnscc6845@gmail.com / dydgnscc6845@naver.com</li>
                             <li className="my_instagram" ref={(el) => (contactRef.current[5] = el)}><span>kakao:</span> wungh12</li>
-                            <li className="my_number" ref={(el) => (contactRef.current[6] = el)}><span>number:</span> 010-5672-4735</li>
+                            <li className="my_number" ref={(el) => (contactRef.current[6] = el)}><span>phone:</span> 010-5672-4735</li>
                         </ul>
                     </div>
                 </div>
