@@ -50,7 +50,7 @@ const Project = () => {
                                 <div className="project_item_box intro">
                                     <p className="project_intro_title project_intro_title1">about my</p>
                                     <p className="project_intro_title project_intro_title2">
-                                        side
+                                        front-end
                                         <br />
                                         projects
                                     </p>

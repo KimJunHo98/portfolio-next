@@ -41,7 +41,7 @@ const About1 = () => {
                         </h2>
                         <ul className="about_items">
                             <li className="item_list" ref={(el) => (textRef.current[2] = el)}>
-                                <p className="profile_text">HTML5, CSS3, React, JavaScript(ES6) 기반의 웹 퍼블리셔 & 프론트엔드 개발자 김준호입니다.</p>
+                                <p className="profile_text">HTML5, CSS3, React, JavaScript(ES6) 기반의 웹 퍼블리셔 & FE개발자 김준호입니다.</p>
                                 <p className="profile_text">인터랙션에 관심이 많으며, 웹 표준/접근성을 준수하여 최적의 사용자 경험을 제공해주는 것을 고민합니다.</p>
                                 <p className="profile_text">성장욕구를 바탕으로 지속적인 학습과 경험을 하여 성장하는 사람이 되겠습니다.</p>
                             </li>
