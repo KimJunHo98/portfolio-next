@@ -2,13 +2,23 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     background-color: var(--black);
 
-    .loading_box {
-        font-size: 4rem;
+    .loading_text {
+        font-size: 6vw;
         font-weight: 600;
         color: var(--white);
+    }
+    .loading_box {
+        height: .5vw;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: var(--white);
     }
 }

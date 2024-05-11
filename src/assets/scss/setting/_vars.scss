@@ -33,10 +33,10 @@
     }
 
     .white300 {
-        color: var(--white300); 
+        color: var(--white300);
     }
     .white200 {
-        color: var(--white200); 
+        color: var(--white200);
     }
 }
 
@@ -59,4 +59,18 @@ body {
     &:active {
         top: 10px;
     }
+}
+
+// 슬라이드 커버
+.slide_cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    transition: all 0.6s ease-in;
+    background-color: var(--black);
 }
