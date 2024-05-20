@@ -32,7 +32,7 @@ const Skill = () => {
                 start: "top top",
                 end: () => `+=${horizontal.offsetWidth}`,
                 pin: true,
-                scrub: isMobile ? 10 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
+                scrub: isMobile ? 1 : 3, // 모바일 기기 여부에 따라 scrub 값을 설정
                 smooth: false,
             },
         });
