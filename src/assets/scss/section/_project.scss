@@ -195,15 +195,13 @@
                                             width: 70%;
                                         }
                                         @include tablet {
-                                            width: 80%;
-                                            
+                                            width: 85%;
                                         }
                                         @include mobile {
-                                            width: 100%;
+                                            width: 96%;
                                             font-size: 1.8rem;
                                         }
                                         @include s_mobile {
-                                            width: 100%;
                                             font-size: 1.6rem;
                                         }
                                     }

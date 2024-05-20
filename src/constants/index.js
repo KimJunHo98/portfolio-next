@@ -75,7 +75,7 @@ export const skillText = [
         name: "github",
         desc: "버전 관리, gitFlow 브랜치 전략, GitHub Pages",
         image: "/images/skill/github.png",
-    },
+    }
 ];
 
 export const siteText = [
@@ -125,7 +125,7 @@ export const projectText = [
         contribution: "기여도: 100%",
         img: "site2-pc.png",
         skill: "html5, js, react.js, styled-component, firebase",
-        desc: "중고거래 사이트를 벤치마킹하여 firebase와 React.js로 심플하게 제작한 웹 & 앱입니다. 팀 프로젝트였지만 개인적으로 firebase와 React.js를 사용하여 리팩토링을 했으며 firebase로 REST API를 설계하여 CRUD를 구현했고 vercel로 배포헀습니다.",
+        desc: "중고거래 사이트를 벤치마킹하여 firebase와 React.js로 심플하게 제작한 웹앱입니다. 팀 프로젝트를 개인으로 리팩토링을 했으며 firebase로 REST API를 설계하여 CRUD를 구현했고 vercel로 배포헀습니다.",
         git: "https://github.com/KimJunHo98/anbd-market",
         view: "https://anbd-market.vercel.app/",
     },
@@ -136,7 +136,7 @@ export const projectText = [
         contribution: "기여도: 100%",
         img: "site3-pc.png",
         skill: "html5, css3, js, react.js, firebase",
-        desc: "트위터를 벤치마킹하여 firebase와 React.js로 심플하게 제작한 웹 & 앱입니다. firebase auth를 활용하여 로그인&로그아웃&회원가입 기능을 구현하고 cloudStorage를 활용하여 실시간 업로드, 삭제, 수정기능을 구현했습니다.",
+        desc: "트위터를 벤치마킹하여 firebase와 React.js로 심플하게 제작한 웹앱입니다. firebase auth를 활용하여 로그인/로그아웃, 회원가입 기능을 구현하고 cloudStorage를 활용하여 실시간 업로드, 삭제, 수정기능을 구현했습니다.",
         git: "https://github.com/KimJunHo98/twit",
         view: "https://kimjunho98.github.io/twit/",
     },
@@ -158,7 +158,7 @@ export const projectText = [
         contribution: "기여도: 100%",
         img: "site6-pc.png",
         skill: "html5, scss, js, react.js",
-        desc: "React.js를 사용한 유튜브 사이트입니다. async/await 함수 & axios를 사용하여 비동기적으로 youTube API의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. gird를 사용하여 반응형으로 제작하였으며 vercel로 배포했습니다.",
+        desc: "React.js를 사용한 유튜브 사이트입니다. async/await 함수와 axios를 사용하여 비동기적으로 youTube API의 데이터를 받아오며, 검색기능, 영상 플레이 기능을 구현하였고, seo 대응을 위해 helmet 라이브러리를 사용하였습니다. gird를 사용하여 반응형으로 제작하였으며 vercel로 배포했습니다.",
         git: "https://github.com/KimJunHo98/mytube",
         view: "https://mytube-gamma.vercel.app/",
     },
