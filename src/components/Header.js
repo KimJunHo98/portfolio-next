@@ -32,10 +32,11 @@ const Header = () => {
         };
     }, [prevScrollPos]);
 
-    const hadlekNavMobileClick = () => {
+    const handleNavMobileClick = () => {
         setActive((prev) => !prev);
     };
-    const hadlekMobileMenuClick = () => {
+
+    const handleMobileMenuClick = () => {
         setActive((prev) => !prev);
     };
 
@@ -46,7 +47,7 @@ const Header = () => {
                 <div className="header_inner">
                     <div className="header">
                         <h1 className="header_logo">
-                            <AnchorLink href="#intro" role="link">
+                            <AnchorLink href="#intro" role="link" tabIndex={2}>
                                 kimjunho&apos;s<span>portfolio</span>
                             </AnchorLink>
                         </h1>
@@ -54,26 +55,29 @@ const Header = () => {
                             <ul className="pc_menu">
                                 {headerNav.map((nav) => (
                                     <li key={nav.title} className="menu_item">
-                                        <AnchorLink href={nav.url}>{nav.title}</AnchorLink>
+                                        <AnchorLink href={nav.url} tabIndex={2}>
+                                            {nav.title}
+                                        </AnchorLink>
                                     </li>
                                 ))}
                             </ul>
                         </nav>
-                        <div
-                            onClick={hadlekNavMobileClick}
+                        <button
+                            onClick={handleNavMobileClick}
                             className={`mobile_menu_btn ${active ? "active" : ""}`}
                             aria-expanded={active ? true : false}
                             aria-controls="mobile_menu"
                             role="button"
                             aria-label="모바일 메뉴 열기"
+                            tabIndex={2}
                         >
                             <span className="btn_bar"></span>
-                        </div>
+                        </button>
                         <div className={`header_nav_mobile ${active ? "active" : ""}`}>
                             <ul className="mobile_menu" aria-label="모바일메뉴">
                                 {headerNav.map((nav) => (
                                     <li key={nav.title} className="menu_item">
-                                        <AnchorLink href={nav.url} onClick={hadlekMobileMenuClick}>
+                                        <AnchorLink href={nav.url} onClick={handleMobileMenuClick} tabIndex={3}>
                                             {nav.title}
                                         </AnchorLink>
                                     </li>

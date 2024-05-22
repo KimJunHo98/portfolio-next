@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
 import { DarkModeProvider } from "../context/DarkModeContext";
 import Loading from "../components/Loading";
 import SlideCover from "../components/SlideCover";
@@ -8,7 +9,7 @@ import Header from "../components/Header";
 import Main from "../app/Main";
 import Footer from "../components/Footer";
 import ScrollPerc from "../utils/ScrollPerc";
-import smooth from "../utils/smooth";
+// import smooth from "../utils/smooth";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -41,9 +42,9 @@ const Home = () => {
         };
     }, []);
 
-    useEffect(() => {
-        smooth();
-    }, []);
+    // useEffect(() => {
+    //     smooth();
+    // }, []);
 
     return (
         <DarkModeProvider>

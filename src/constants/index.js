@@ -1,26 +1,32 @@
 export const headerNav = [
     {
         title: "about",
+        text: "소개1 영역 바로가기",
         url: "#about",
     },
     {
         title: "skill",
+        text: "스킬 영역 바로가기",
         url: "#skill",
     },
     {
         title: "publishing",
+        text: "사이트 영역 바로가기",
         url: "#site",
     },
     {
         title: "development",
+        text: "개발 사이트 영역 바로가기",
         url: "#project",
     },
     {
         title: "introduce",
+        text: "소개2 영역 바로가기",
         url: "#about2",
     },
     {
         title: "contact",
+        text: " 연락처 영역 바로가기",
         url: "#contact",
     },
 ];
@@ -108,12 +114,12 @@ export const siteText = [
     },
     {
         num: "04",
-        title: "그림판",
+        title: "todolist",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "그림판 사이트입니다. htlm5의 canvas를 사용하여 그림 그리기, 텍스트 삽입, 이미지 삽입, 초기화, 지우기, 저장, 토글 메뉴 등의 기능을 구현했습니다.",
-        git: "https://github.com/KimJunHo98/draw-board",
-        view: "https://draw-board.vercel.app/",
+        desc: "투두리스트 사이트입니다. 리스트 작성, 저장 & 삭제 기능을 구현했으며, 실시간 캘린더와 시간을 볼 수 있게 했습니다.",
+        git: "https://github.com/KimJunHo98/todolist",
+        view: "https://kimjunho98.github.io/todolist/",
     },
 ];
 
