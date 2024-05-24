@@ -123,8 +123,7 @@
 
                         @for $i from 1 through 4 {
                             &.active#{$i} {
-                                background-color: var(--black);
-                                color: var(--white);
+                                background-color: var(--white#{$i}00);
                             }
                         }
                     }

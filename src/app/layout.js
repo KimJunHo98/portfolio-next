@@ -1,3 +1,4 @@
+import SmoothScroll from "../utils/SmoothScroll";
 import "../assets/scss/style.scss";
 
 export const metadata = {
@@ -24,7 +25,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="ko">
-            <body>{children}</body>
+            <body>
+                <SmoothScroll>{children}</SmoothScroll>
+            </body>
         </html>
     );
 }

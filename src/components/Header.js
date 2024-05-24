@@ -3,6 +3,11 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useDarkMode } from "../context/DarkModeContext";
 import { headerNav } from "../constants/index";
 
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
 const Header = () => {
     const { dark } = useDarkMode();
     const [active, setActive] = useState(false);
@@ -40,6 +45,17 @@ const Header = () => {
         setActive((prev) => !prev);
     };
 
+    // 스무스 스크롤 중에도 클릭했을 때 섹션 이동
+    const handleNavClick = (sectionId) => {
+        gsap.to(window, {
+            duration: 1.5,
+            scrollTo: {
+                y: sectionId,
+            },
+            ease: "power2.inOut",
+        });
+    };
+
     return (
         <>
             <header id="header" ref={headerRef} className={`${isHeaderVisible ? "" : "unvisible"} ${dark ? "dark" : ""}`}>
@@ -47,7 +63,8 @@ const Header = () => {
                 <div className="header_inner">
                     <div className="header">
                         <h1 className="header_logo">
-                            <AnchorLink href="#intro" role="link" tabIndex={2}>
+                            <AnchorLink href="#intro" role="link" tabIndex={2}
+                            onClick={() => handleNavClick("#intro")}>
                                 kimjunho&apos;s<span>portfolio</span>
                             </AnchorLink>
                         </h1>
@@ -55,7 +72,7 @@ const Header = () => {
                             <ul className="pc_menu">
                                 {headerNav.map((nav) => (
                                     <li key={nav.title} className="menu_item">
-                                        <AnchorLink href={nav.url} tabIndex={2}>
+                                        <AnchorLink href={nav.url} tabIndex={2} onClick={() => handleNavClick(nav.url)}>
                                             {nav.title}
                                         </AnchorLink>
                                     </li>

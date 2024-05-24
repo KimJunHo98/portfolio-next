@@ -68,21 +68,12 @@
                     border-radius: 8px;
                     font-size: 2vw;
                     font-weight: 600;
-                    background-color: rgba(0, 0, 0, 0.8);
+                    // background-color: rgba(0, 0, 0, 0.8);
 
                     @include mobile {
                         font-size: 2rem;
                     }
                 }
-            }
-            .my_address span {
-                color: var(--white100);
-            }
-            .my_instagram span {
-                color: var(--white200);
-            }
-            .my_number span {
-                color: var(--white500);
             }
         }
     }

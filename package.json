@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.26",
+    "@studio-freight/react-lenis": "^0.0.47",
     "gsap": "^3.12.5",
     "next": "latest",
     "react": "latest",
