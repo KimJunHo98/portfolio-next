@@ -90,7 +90,7 @@ export const siteText = [
         title: "glife",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: "경기생활문화센터 사이트를 리뉴얼한 사이트입니다. flex를 사용한 반응형, 웹표준, 웹접근성을 고려하여 제작했으며 쿠키 데이터 사용한 드래그 팝업, 페이드인아웃 배너, 각 섹션마다 스크롤 애니메이션을 구현했습니다.",
+        desc: "경기생활문화센터를 리뉴얼한 사이트입니다. flex를 사용한 반응형, 웹표준, 웹접근성을 고려하여 제작했으며 쿠키 데이터 사용한 드래그 팝업, 페이드인아웃 배너, 각 섹션마다 스크롤 애니메이션을 구현했습니다.",
         git: "https://github.com/KimJunHo98/project1",
         view: "https://kimjunho98.github.io/project1/",
     },
@@ -99,7 +99,7 @@ export const siteText = [
         title: "gabia",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
-        desc: '가비아 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 "클라우드"를 클릭하면 서브페이지로 이동합니다. 개발자모드로 참고하여 코드를 분석 후 제작했습니다.',
+        desc: '가비아 사이트입니다. flex를 사용한 반응형, 웹표준을 고려하여 제작하였으며 서브페이지와 슬라이드 배너, 팝업을 구현했습니다. 헤더의 목록 중 "클라우드"를 클릭하면 서브페이지로 이동합니다. 개발자모드로 코드를 분석 후 제작했습니다.',
         git: "https://github.com/KimJunHo98/gabia",
         view: "https://kimjunho98.github.io/gabia/",
     },
@@ -120,6 +120,15 @@ export const siteText = [
         desc: "투두리스트 사이트입니다. 리스트 작성, 저장 & 삭제 기능을 구현했으며, 실시간 캘린더와 시간을 볼 수 있게 했습니다.",
         git: "https://github.com/KimJunHo98/todolist",
         view: "https://kimjunho98.github.io/todolist/",
+    },
+    {
+        num: "05",
+        title: "flix",
+        contribution: "기여도: 100%",
+        skill: "html5, css3, js, jquery",
+        desc: "넷플릭스 사이트입니다. 메인, 로그인 페이지를 구축했으며, flex를 사용한 반응형, drop-down Q&A를 구현했습니다.",
+        git: "https://github.com/KimJunHo98/junflix",
+        view: "https://kimjunho98.github.io/junflix/",
     },
 ];
 
