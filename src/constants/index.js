@@ -87,6 +87,15 @@ export const skillText = [
 export const siteText = [
     {
         num: "01",
+        title: "ranking dakcom",
+        contribution: "기여도: 100%",
+        skill: "html5, scss, js",
+        desc: "랭킹닭컴 리뉴얼 사이트입니다. 기존 사이트의 Gnb 메뉴 사용성과 적응형의 불편함을 개선하기 위해 작업했습니다. 메인 페이지로 구성했으며, 바닐라 자바스크립트만 사용하여 비주얼 슬라이드, 스티키 헤더, 슬라이드 메뉴, 탭메뉴를 구현했습니다.",
+        git: "https://github.com/KimJunHo98/ranking-dakcom",
+        view: "https://kimjunho98.github.io/ranking-dakcom/",
+    },
+    {
+        num: "02",
         title: "glife",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
@@ -95,7 +104,7 @@ export const siteText = [
         view: "https://kimjunho98.github.io/project1/",
     },
     {
-        num: "02",
+        num: "03",
         title: "gabia",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
@@ -104,7 +113,7 @@ export const siteText = [
         view: "https://kimjunho98.github.io/gabia/",
     },
     {
-        num: "03",
+        num: "04",
         title: "bbatsue [팀플]",
         contribution: "기여도: 40%",
         skill: "html5, css3, scss, js, bootstrap, figma, github",
@@ -113,7 +122,7 @@ export const siteText = [
         view: "https://bbatsue-web.vercel.app/",
     },
     {
-        num: "04",
+        num: "05",
         title: "todolist",
         contribution: "기여도: 100%",
         skill: "html5, css3, js",
@@ -122,7 +131,7 @@ export const siteText = [
         view: "https://kimjunho98.github.io/todolist/",
     },
     {
-        num: "05",
+        num: "06",
         title: "flix",
         contribution: "기여도: 100%",
         skill: "html5, css3, js, jquery",
