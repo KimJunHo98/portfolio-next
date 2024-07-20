@@ -87,7 +87,7 @@ export const skillText = [
 export const siteText = [
     {
         num: "01",
-        title: "ranking dakcom",
+        title: "rankingdak",
         contribution: "기여도: 100%",
         skill: "html5, scss, js",
         desc: "랭킹닭컴 리뉴얼 사이트입니다. 기존 사이트의 Gnb 메뉴 사용성과 적응형의 불편함을 개선하기 위해 작업했습니다. 메인 페이지로 구성했으며, 바닐라 자바스크립트만 사용하여 비주얼 슬라이드, 스티키 헤더, 슬라이드 메뉴, 탭메뉴를 구현했습니다.",

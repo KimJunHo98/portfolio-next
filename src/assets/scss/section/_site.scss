@@ -117,10 +117,10 @@
                                 color: var(--white#{$i}00);
 
                                 @include tablet {
-                                    font-size: 5rem;
+                                    font-size: 4rem;
                                 }
                                 @include mobile {
-                                    font-size: 5rem;
+                                    font-size: 4rem;
                                 }
                                 @include s_mobile {
                                     font-size: 10vw;
@@ -242,6 +242,15 @@
                 }
                 .item5 {
                     top: 220px;
+                }
+                .item6 {
+                    top: 180px;
+                    margin-left: 50.5%;
+
+                    @include mobile {
+                        top: 190px;
+                        margin: 0;
+                    }
                 }
             }
         }
